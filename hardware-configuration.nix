@@ -12,6 +12,9 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+  boot.blacklistedKernelModules = [
+    "hid-sensor-hub" # To make the brightness buttons work on Framework 13
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/ab896e28-37f5-4462-ab0a-e6850126f8ff";

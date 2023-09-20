@@ -18,9 +18,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.blacklistedKernelModules = [
-    "hid-sensor-hub" # To make the brightness buttons work on Framework
-  ];
   virtualisation.libvirtd.enable = true;
 
   networking.hostName = "yoshi"; # Define your hostname.
