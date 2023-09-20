@@ -102,6 +102,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       neovim
+      gh
       # vscode
       vscodium
       firefox
