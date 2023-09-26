@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./nix-alien.nix
       ./nix-unstable.nix
+      ./neovim.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -98,9 +99,9 @@
     description = "kin";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      neovim
       gh
       # vscode
+      # neovim
       vscodium
       firefox
 
@@ -109,12 +110,11 @@
       libgourou # To remove DRM from .acsm files
 
       unstable.cargo
-      unstable.stack
       ghdl
 
       jetbrains.clion
-      # jetbrains.rider
-      # jetbrains.idea-ultimate
+      jetbrains.idea-ultimate
+      jetbrains.rider
 
       itch
 
@@ -134,16 +134,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      konsole
-      nautilus-open-any-terminal
-
-      nix-index
-
+      nano # Just to make sure there is an editor
       wl-clipboard
       parted gparted
-      apfs-fuse
 
+      git
       curl wget
       htop neofetch
       zip unzip
@@ -151,9 +146,12 @@
       ffmpeg
       dos2unix
       tldr
+      sl
+      cowsay
+      # texlive.combined.scheme-medium
 
-      git
       nixos-option
+      nix-index
       gnumake gcc nodejs python311
 
       papirus-icon-theme
@@ -164,14 +162,15 @@
       pkgs.gnomeExtensions.gsconnect
       pkgs.gnomeExtensions.appindicator
       pkgs.gnomeExtensions.blur-my-shell
+      konsole
+      nautilus-open-any-terminal
 
       qemu
       virt-manager
       gnome.gnome-boxes
 
       wineWowPackages.stable
-      # wineWowPackages.waylandFull
-      winetricks
+      # wineWowPackages.waylandFull winetricks
       lutris
 
       (steam.override {
