@@ -103,7 +103,6 @@
       # vscode
       # neovim
       vscodium
-      firefox
 
       util-linux
       vlc mpv
@@ -154,6 +153,11 @@
       nix-index
       gnumake gcc nodejs python311
 
+      konsole
+      firefox
+      thunderbird
+      nautilus-open-any-terminal
+
       papirus-icon-theme
       libsForQt5.breeze-gtk
       fira fira-code fira-code-symbols
@@ -162,8 +166,6 @@
       pkgs.gnomeExtensions.gsconnect
       pkgs.gnomeExtensions.appindicator
       pkgs.gnomeExtensions.blur-my-shell
-      konsole
-      nautilus-open-any-terminal
 
       qemu
       virt-manager
