@@ -18,6 +18,14 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.blacklistedKernelModules = [
+    "hid-sensor-hub" # To make the brightness buttons work on Framework 13
+  ];
+
+  swapDevices = [
+  { device = "/var/lib/swapfile";
+    size = 16*1024;
+  }];
 
   virtualisation.libvirtd.enable = true;
 
