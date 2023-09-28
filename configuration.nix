@@ -216,6 +216,12 @@
   # };
   programs.java.enable = true;
   programs.dconf.enable = true;
+  programs.direnv = {
+    enable = true;
+    silent = true;
+    loadInNixShell = true;
+    nix-direnv.enable = true;
+  };
 
   programs.steam = {
     enable = true;
