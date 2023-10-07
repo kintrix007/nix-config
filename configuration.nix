@@ -193,7 +193,14 @@
 
       nixos-option
       nix-index
-      gnumake gcc nodejs python311
+      nil      # One Nix LSP
+      rnix-lsp # Another Nix LSP
+      nodePackages.bash-language-server shfmt
+      
+      gnumake gcc ccls
+      nodejs nodePackages.typescript-language-server
+      python311 nodePackages.pyright python311Packages.autopep8
+      lua lua-language-server
 
       konsole
       firefox
