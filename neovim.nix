@@ -1,11 +1,12 @@
 { config, pkgs, ... }:
 let
-  haskellPackages = with pkgs.haskellPackages; [
-    haskell-language-server
+  haskellPackages = with pkgs; [
+    (haskell-language-server.override { supportedGhcVersions = [ "8107" ]; })
   ];
 in {
   environment.systemPackages = haskellPackages ++ (with pkgs; [
     neovim
+    vimPlugins.packer-nvim
   ]);
 
   programs.neovim = {
