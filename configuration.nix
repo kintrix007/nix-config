@@ -263,8 +263,12 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = with pkgs.lib; (
+    range 1714 1764 # For GSConnect
+  );
+  networking.firewall.allowedUDPPorts = with pkgs.lib; (
+    range 1714 1764 # For GSConnect
+  );
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
