@@ -161,7 +161,6 @@
       itch
 
       godot
-      aseprite-unfree
     ];
   };
 
