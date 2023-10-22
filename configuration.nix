@@ -346,6 +346,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
 
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
   system.autoUpgrade.allowReboot = false;
 }
