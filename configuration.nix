@@ -205,12 +205,14 @@
       curl wget
       htop neofetch
       zip unzip
+      file
       bc calc
       ffmpeg
       dos2unix
       tldr
       sl
       cowsay
+      poppler_utils # e.g. pdfunite
       # texlive.combined.scheme-medium
 
       nixos-option
@@ -227,6 +229,7 @@
       konsole
       firefox
       thunderbird
+      gnome.nautilus-python
       nautilus-open-any-terminal
 
       papirus-icon-theme
