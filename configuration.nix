@@ -28,6 +28,7 @@
   }];
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.docker.enable = true;
 
   networking.hostName = "yoshi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -161,7 +162,7 @@
   users.users.kin = {
     isNormalUser = true;
     description = "kin";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       gh
       # vscode
