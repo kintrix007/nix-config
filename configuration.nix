@@ -181,8 +181,6 @@
       jetbrains.rider
 
       itch
-
-      godot
     ];
   };
 
