@@ -196,6 +196,19 @@
     ];
   };
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
+        extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
+          libgdiplus
+        ]);
+      });
+    })
+    (final: prev:
+      import (fetchTarball "https://github.com/nix-community/nixd/archive/master.tar.gz")
+    )
+  ];
+
   nixpkgs.config.permittedInsecurePackages = [
     "python-2.7.18.6" # For Aseprite
     "electron-11.5.0" # For Itch Desktop
@@ -315,16 +328,6 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
-
-  nixpkgs.overlays = [
-    (final: prev: {
-      steam = prev.steam.override ({ extraPkgs ? pkgs': [], ... }: {
-        extraPkgs = pkgs': (extraPkgs pkgs') ++ (with pkgs'; [
-          libgdiplus
-        ]);
-      });
-    })
-  ];
 
   # List services that you want to enable:
 
