@@ -183,7 +183,6 @@
       # neovim
       vscodium
 
-      util-linux
       vlc mpv
       libgourou # To remove DRM from .acsm files
 
@@ -214,6 +213,7 @@
       parted gparted
 
       git
+      util-linux
       curl wget
       htop neofetch
       zip unzip
