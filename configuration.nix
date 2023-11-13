@@ -243,6 +243,7 @@
       thunderbird
       gnome.nautilus-python
       nautilus-open-any-terminal
+      authenticator
 
       papirus-icon-theme
       libsForQt5.breeze-gtk
