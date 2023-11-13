@@ -204,9 +204,6 @@
         ]);
       });
     })
-    (final: prev:
-      import (fetchTarball "https://github.com/nix-community/nixd/archive/master.tar.gz")
-    )
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -242,7 +239,7 @@
       nixos-option
       nix-index
       nil      # One Nix LSP
-      rnix-lsp # Another Nix LSP
+      # rnix-lsp # Another Nix LSP
       nodePackages.bash-language-server shfmt
       
       gnumake gcc ccls
