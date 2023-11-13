@@ -256,6 +256,7 @@
       qemu
       virt-manager
       gnome.gnome-boxes
+      unstable.epiphany
 
       wineWowPackages.stable
       # wineWowPackages.waylandFull winetricks
@@ -272,7 +273,7 @@
     # baobab      # disk usage analyzer
     # cheese      # photo booth
     # eog         # image viewer
-    # epiphany    # web browser
+    epiphany    # web browser
     # gedit       # text editor
     # simple-scan # document scanner
     totem       # video player
