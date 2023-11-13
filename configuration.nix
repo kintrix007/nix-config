@@ -186,8 +186,8 @@
       vlc mpv
       libgourou # To remove DRM from .acsm files
 
-      unstable.cargo
       ghdl
+      unstable.cargo unstable.rust-analyzer
 
       jetbrains.clion
       jetbrains.idea-ultimate
