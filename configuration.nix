@@ -297,6 +297,9 @@
       papirus-icon-theme
       libsForQt5.breeze-gtk
 
+      # Utils for the thing OBS uses to simulate webcam
+      v4l-utils
+
       libdecor
       pkgs.gnomeExtensions.pop-shell
       pkgs.gnomeExtensions.gsconnect
