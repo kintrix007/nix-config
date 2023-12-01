@@ -233,6 +233,13 @@
         ]);
       });
     })
+    # (final: prev:
+    #   let
+    #     nixd = fetchTarball "https://github.com/nix-community/nixd/archive/master.tar.gz";
+    #   in
+    #   pkgs.callPackage (import nixd)
+    #   # with pkgs; import nixd  { inherit lib stdenv nix pkg-config llvmPackages bison meson gtest flex lit ninja boost182 libbacktrace nixpkgs-fmt; }
+    # )
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
