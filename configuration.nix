@@ -32,6 +32,7 @@
   }];
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.waydroid.enable = true;
   # virtualisation.docker.enable = true;
   virtualisation.podman = {
     enable = true;
