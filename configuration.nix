@@ -309,7 +309,7 @@
       qemu
       virt-manager
       gnome.gnome-boxes
-      unstable.epiphany
+      epiphany
 
       wineWowPackages.stable
       # wineWowPackages.waylandFull winetricks
