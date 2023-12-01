@@ -320,6 +320,22 @@
          # withJava = true;
          extraPkgs = pkgs: [ bumblebee glxinfo ];
       }).run
+
+      (writeShellScriptBin "mkgitignore" ''
+        if [[ $# == 0 ]]; then
+          echo "Error: Expected at least one arugment but received $@." >&2
+          exit 1
+        fi
+
+        if [[ -f .gitignore ]]; then
+          echo "Error: .gitignore already exists" >&2
+          exit 1
+        fi
+
+        TOOL="$1"
+        shift
+        curl -L "https://gitignore.io/api/$TOOL" -o .gitignore "$@"
+      '')
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
