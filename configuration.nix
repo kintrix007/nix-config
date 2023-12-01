@@ -278,9 +278,10 @@
       nix-prefetch-git
       nix-prefetch-docker
       nil      # One Nix LSP
-      # rnix-lsp # Another Nix LSP
-      nodePackages.bash-language-server shfmt
+      rnix-lsp # Another Nix LSP
       
+      nodePackages.bash-language-server shfmt
+      python311Packages.mdformat nodePackages.markdownlint-cli
       gnumake gcc ccls
       nodejs nodePackages.typescript-language-server
       python311 nodePackages.pyright python311Packages.autopep8
