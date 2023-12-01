@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      <home-manager/nixos>
       ./hardware-configuration.nix
       ./nix-alien.nix
       ./nix-unstable.nix
@@ -21,6 +22,9 @@
   boot.blacklistedKernelModules = [
     "hid-sensor-hub" # To make the brightness buttons work on Framework 13
   ];
+  # For OBS virtual webcam
+  boot.kernelModules = [ "v4l2loopback" ];
+  boot.extraModulePackages = [ pkgs.linuxPackages.v4l2loopback ];
 
   swapDevices = [
   { device = "/var/lib/swapfile";
@@ -171,6 +175,20 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+
+  home-manager.useUserPackages = true;
+  home-manager.useGlobalPkgs = true;
+  home-manager.users.kin = { pkgs, ... }: {
+    programs.obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        input-overlay
+        obs-pipewire-audio-capture
+      ];
+    };
+
+    home.stateVersion = "23.05";
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.kin = {
