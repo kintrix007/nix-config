@@ -1,13 +1,12 @@
 { config, pkgs, ... }:
+
 let
-  unstableTarball =
-    fetchTarball
-      "https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz";
+  unstableChannel = fetchTarball "channel:nixpkgs-unstable";
 in
 {
   nixpkgs.config = {
-    packageOverrides = pkgs: with pkgs; {
-      unstable = import unstableTarball {
+    packageOverrides = pkgs: {
+      unstable = import unstableChannel {
         config = config.nixpkgs.config;
       };
     };
