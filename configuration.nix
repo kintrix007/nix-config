@@ -32,7 +32,12 @@
   }];
 
   virtualisation.libvirtd.enable = true;
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
 
   networking.hostName = "yoshi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -194,7 +199,12 @@
   users.users.kin = {
     isNormalUser = true;
     description = "kin";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      # ! Do not add docker group. That is basically the same as root.
+      # "docker"
+    ];
     packages = with pkgs; [
       gh
       # vscode
