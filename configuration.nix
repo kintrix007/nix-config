@@ -259,6 +259,7 @@
 
       git
       util-linux
+      tree
       curl wget
       htop neofetch
       zip unzip
@@ -274,6 +275,8 @@
 
       nixos-option
       nix-index
+      nix-prefetch-git
+      nix-prefetch-docker
       nil      # One Nix LSP
       # rnix-lsp # Another Nix LSP
       nodePackages.bash-language-server shfmt
