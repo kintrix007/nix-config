@@ -32,9 +32,9 @@
     unstable.cargo
     unstable.rust-analyzer
 
-    haskell.compiler.ghc8107
+    haskell.compiler.ghc928
     (haskell-language-server.override {
-      supportedGhcVersions = [ "8107" ];
+      supportedGhcVersions = [ "928" ];
     })
 
     (writeShellScriptBin "mkgitignore" ''

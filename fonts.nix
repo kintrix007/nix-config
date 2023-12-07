@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 
 {
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     unstable.fira-code-nerdfont
 
     fira
