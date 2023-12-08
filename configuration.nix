@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./nix-unstable.nix
       ./home-manager
       ./hardware-configuration.nix
@@ -31,9 +32,11 @@
   ];
 
   swapDevices = [
-  { device = "/var/lib/swapfile";
-    size = 16*1024;
-  }];
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+    }
+  ];
 
   virtualisation.waydroid.enable = true; # Leads to dangling symlinks
   # virtualisation.docker.enable = true;
@@ -90,6 +93,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.gutenprint ];
 
   hardware.opengl.enable = true;
   hardware.opengl.extraPackages = with pkgs; [
@@ -118,7 +122,8 @@
       # neovim
       vscodium
 
-      vlc mpv
+      vlc
+      mpv
       libgourou # To remove DRM from .acsm files
 
       jetbrains.clion
@@ -151,41 +156,46 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-      nano # Just to make sure there is an editor
-      wl-clipboard
-      parted gparted
+    nano # Just to make sure there is an editor
+    wl-clipboard
+    parted
+    gparted
 
-      git
-      util-linux
-      tree
-      curl wget
-      htop neofetch
-      zip unzip
-      file
-      bc calc
-      ffmpeg
-      dos2unix
-      tldr
-      sl
-      cowsay
-      poppler_utils # e.g. pdfunite
-      # texlive.combined.scheme-medium
+    git
+    util-linux
+    tree
+    curl
+    wget
+    htop
+    neofetch
+    zip
+    unzip
+    file
+    bc
+    calc
+    ffmpeg
+    dos2unix
+    tldr
+    sl
+    cowsay
+    poppler_utils # e.g. pdfunite
+    # texlive.combined.scheme-medium
 
-      nixos-option
-      nix-index
-      nix-prefetch-git
-      nix-prefetch-docker
+    nixos-option
+    nix-index
+    nix-prefetch-git
+    nix-prefetch-docker
 
-      konsole
-      firefox
-      thunderbird
-      authenticator
+    konsole
+    firefox
+    thunderbird
+    authenticator
 
-      libdecor
+    libdecor
 
-      wineWowPackages.stable
-      # wineWowPackages.waylandFull winetricks
-      lutris
+    wineWowPackages.stable
+    # wineWowPackages.waylandFull winetricks
+    lutris
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -221,8 +231,8 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [];
-  networking.firewall.allowedUDPPorts = [];
+  networking.firewall.allowedTCPPorts = [ ];
+  networking.firewall.allowedUDPPorts = [ ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
