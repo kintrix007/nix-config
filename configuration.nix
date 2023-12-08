@@ -126,6 +126,7 @@
       jetbrains.rider
 
       itch
+      butler
     ];
   };
 
