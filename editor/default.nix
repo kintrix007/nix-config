@@ -29,8 +29,8 @@
     lua
     lua-language-server
 
-    unstable.cargo
-    unstable.rust-analyzer
+    # unstable.cargo
+    # unstable.rust-analyzer
 
     haskell.compiler.ghc928
     (haskell-language-server.override {
