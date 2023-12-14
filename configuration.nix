@@ -156,6 +156,7 @@
     git
     util-linux
     tree
+    ripgrep
     curl
     wget
     htop
@@ -175,13 +176,14 @@
 
     nixos-option
     nix-index
-    nix-prefetch-git
-    nix-prefetch-docker
+    nix-prefetch-scripts
 
     konsole
     firefox
     thunderbird
     authenticator
+    okular
+    filelight
 
     libdecor
 
