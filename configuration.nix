@@ -18,7 +18,7 @@
       ./input.nix
       ./sound.nix
       ./steam.nix
-      ./vm.nix
+      ./virtualization.nix
       ./nix-alien.nix
     ];
 
@@ -37,14 +37,6 @@
       size = 16 * 1024;
     }
   ];
-
-  virtualisation.waydroid.enable = true; # Leads to dangling symlinks
-  # virtualisation.docker.enable = true;
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
-  };
 
   networking.hostName = "yoshi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
