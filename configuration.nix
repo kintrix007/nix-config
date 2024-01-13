@@ -191,6 +191,7 @@
 
     konsole
     firefox
+    w3m # A nice text-based browser
     thunderbird
     authenticator
     okular
