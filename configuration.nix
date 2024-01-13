@@ -183,6 +183,7 @@
     cowsay
     poppler_utils # e.g. pdfunite
     # texlive.combined.scheme-medium
+    ydotool
 
     nixos-option
     nix-index
