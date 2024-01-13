@@ -45,6 +45,15 @@
   #   "192.168.178.122" = [ "rw1" ];
   # };
 
+  services.udev.extraRules = ''
+    # ST-LINK/V2
+    # `lsusb` lists idVendor and idProduct separated by a colon (0483:3748)
+    ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
+
+    # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
+    # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
+  '';
+
   services.avahi = {
     enable = true;
     nssmdns = true;
@@ -155,6 +164,7 @@
 
     git
     util-linux
+    usbutils
     tree
     ripgrep
     curl
