@@ -13,19 +13,22 @@
     # baobab      # disk usage analyzer
     # cheese      # photo booth
     # eog         # image viewer
-    epiphany    # web browser
+    epiphany # web browser
     # gedit       # text editor
     # simple-scan # document scanner
-    totem       # video player
-    yelp        # help viewer
+    totem # video player
+    yelp # help viewer
     # evince      # document viewer
     # file-roller # archive manager
     # geary       # email client
-    seahorse    # password manager
+    seahorse # password manager
 
     # these should be self explanatory
-    gnome-contacts gnome-music
-    pkgs.gnome-connections pkgs.gnome-photos pkgs.gnome-tour
+    gnome-contacts
+    gnome-music
+    pkgs.gnome-connections
+    pkgs.gnome-photos
+    pkgs.gnome-tour
     pkgs.gnome-console
     # gnome-weather
     # gnome-extensions # What is the name of it?
@@ -35,11 +38,14 @@
   ];
 
   environment.systemPackages = with pkgs; [
-      gnome.nautilus-python
-      nautilus-open-any-terminal
-      epiphany
+    gnomecast
+    gnome.nautilus-python
+    epiphany
+    gnome-feeds
+    newsflash
 
-      papirus-icon-theme
-      libsForQt5.breeze-gtk
+    nautilus-open-any-terminal
+    papirus-icon-theme
+    libsForQt5.breeze-gtk
   ];
 }
