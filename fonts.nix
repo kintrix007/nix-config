@@ -2,11 +2,10 @@
 
 {
   fonts.packages = with pkgs; [
-    unstable.fira-code-nerdfont
-
     fira
     fira-code
     fira-code-symbols
+    fira-code-nerdfont
     noto-fonts-cjk-sans
     cantarell-fonts
     source-code-pro
