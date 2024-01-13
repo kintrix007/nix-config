@@ -17,7 +17,7 @@
 
     gnumake
     gcc
-    ccls
+    clang-tools
 
     nodejs
     nodePackages.typescript-language-server
