@@ -12,6 +12,7 @@
       ./home-manager
       ./hardware-configuration.nix
 
+      ./vlc
       ./gnome
       ./editor
       ./terminal
@@ -124,7 +125,7 @@
       # neovim
       vscodium
 
-      vlc
+      # vlc
       mpv
       libgourou # To remove DRM from .acsm files
 
