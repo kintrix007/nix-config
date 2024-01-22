@@ -4,10 +4,11 @@ let
   vlc-bittorent = import ./vlc-bittorrent.nix { };
 in
 {
-  environment.systemPackages = [
-    (pkgs.writeShellScriptBin "vlc"
-      ''
-        VLC_PLUGIN_PATH=${vlc-bittorent} ${pkgs.vlc}/bin/vlc "$@"
-      '')
+  environment.systemPackages = with pkgs; [
+    vlc
   ];
+
+  environment.sessionVariables = {
+    VLC_PLUGIN_PATH = "${vlc-bittorent}";
+  };
 }
