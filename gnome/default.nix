@@ -41,7 +41,6 @@
     gnomecast
     gnome.nautilus-python
     epiphany
-    gnome-feeds
     newsflash
 
     nautilus-open-any-terminal
