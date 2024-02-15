@@ -16,6 +16,7 @@
       ./gnome
       ./editor
       ./terminal
+      ./man.nix
       ./fonts.nix
       ./input.nix
       ./sound.nix
