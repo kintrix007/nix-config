@@ -188,6 +188,8 @@
     # texlive.combined.scheme-medium
     ydotool
 
+    ntfs3g
+
     nixos-option
     nix-index
     nix-prefetch-scripts
