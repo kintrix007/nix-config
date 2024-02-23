@@ -209,6 +209,8 @@
     wineWowPackages.stable
     # wineWowPackages.waylandFull winetricks
     lutris
+
+    sshfs
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
