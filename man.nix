@@ -8,7 +8,10 @@
   environment.systemPackages = with pkgs; [
     # Oh wow, didn't realize this is not default
     man-pages
+    linux-doc
     linux-manual
+    linuxHeaders
+    kernel-headers
 
     # For some reason this is separate from clang
     clang-manpages
