@@ -16,6 +16,7 @@
       ./gnome
       ./editor
       ./terminal
+      ./fprint.nix
       ./postgres.nix
       ./man.nix
       ./fonts.nix
