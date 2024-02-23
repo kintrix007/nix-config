@@ -1,6 +1,6 @@
 # Notes
 
-## Install simething from the unstable channel
+## Install something from the unstable channel
 
 ```sh
 nix-env -f channel:nixpkgs-unstable -iA pkgname
