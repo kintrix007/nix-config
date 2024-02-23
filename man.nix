@@ -11,7 +11,6 @@
     linux-doc
     linux-manual
     linuxHeaders
-    kernel-headers
 
     # For some reason this is separate from clang
     clang-manpages
