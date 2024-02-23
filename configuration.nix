@@ -223,21 +223,7 @@
   programs.java.enable = true;
   programs.dconf.enable = true;
 
-  programs.direnv = {
-    enable = true;
-    silent = true;
-    loadInNixShell = true;
-    nix-direnv.enable = true;
-  };
-
   # List services that you want to enable:
-
-  # Enable the services for the fingerprint reader
-  services.fprintd.enable = true;
-  services.fprintd.package = pkgs.fprintd-tod;
-  services.fprintd.tod.enable = true;
-  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix;
-  # services.fprintd.tod.driver = pkgs.libfprint-2-tod1-vfs0090;
 
   # Enable flatpak support
   services.flatpak.enable = true;
