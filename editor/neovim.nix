@@ -1,46 +1,53 @@
 { config, pkgs, ... }:
 
-{
-  environment.systemPackages = with pkgs; [
-    vimPlugins.packer-nvim
+let
+  themes = with pkgs.vimPlugins; [
+    sonokai
+    kanagawa-nvim
+    catppuccin-nvim
+    onedarkpro-nvim
   ];
+  parsers = import ./ts-parsers.nix { inherit pkgs; };
+  plugins = with pkgs.vimPlugins; [
+    vim-fugitive
+    comment-nvim
 
+    telescope-nvim
+    # Needed for telescope
+    plenary-nvim
+    undotree
+
+    nvim-treesitter
+    nvim-treesitter-context
+    nvim-treesitter-endwise
+    playground
+
+    indent-blankline-nvim
+    vim-surround
+    nvim-autopairs
+
+    lualine-nvim
+    # Needed for lualine
+    nvim-web-devicons
+
+    copilot-lua
+  ] ++ parsers ++ themes;
+in
+{
   programs.neovim = {
     enable = true;
     defaultEditor = true;
     viAlias = false;
     vimAlias = true;
-    withNodeJs = true; # Needed for coc-nvim
-    #    configure = {
-    #      packages.myPlugins = with pkgs.vimPlugins; {
-    #        start = [
-    #          kanagawa-nvim
-    #          telescope-nvim
-    #          plenary-nvim
-    #          nvim-treesitter
-    #          nvim-treesitter-context
-    #          playground
-    #          undotree
-    #          lualine-nvim
-    #          nvim-autopairs
-    #          vim-commentary
-    #          vim-fugitive
-    #          lsp-zero-nvim
-    #          nvim-lspconfig
-    #          nvim-cmp
-    #          cmp-nvim-lsp
-    #          luasnip
-    #          copilot-lua
-    #          (pkgs.vimUtils.buildVimPlugin {
-    #            name = "my-config";
-    #            src = ./my-neovim-config;
-    #          })
-    #        ];
-    #        opt = [];
-    #      };
-    #      customRC = ''
-    #        lua require("init")
-    #      '';
-    #    };
+
+    configure = {
+      packages.myVimPackage = {
+        start = plugins;
+        # opt = plugins;
+      };
+      customRC = ''
+        source ~/.config/nvim/init.lua
+      '';
+    };
   };
 }
