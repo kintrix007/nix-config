@@ -12,6 +12,7 @@
 
     nodePackages.bash-language-server
     shfmt
+    shellcheck
 
     python311Packages.mdformat
     nodePackages.markdownlint-cli
