@@ -39,6 +39,8 @@ in
     defaultEditor = true;
     viAlias = false;
     vimAlias = true;
+    withNodeJs = true;
+    withPython3 = true;
 
     configure = {
       packages.myVimPackage = {
