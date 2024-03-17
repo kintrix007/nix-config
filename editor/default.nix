@@ -33,7 +33,8 @@
     lua
     lua-language-server
 
-    commitlint
+    # commitlint
+    # gitlint
     nodePackages.jsonlint
     yamllint
 
