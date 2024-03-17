@@ -33,6 +33,8 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   cmake
   make
 
+  markdown
+  markdown_inline
   yaml
   json
   jsonc
