@@ -170,34 +170,34 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nano # Just to make sure there is an editor
+    coreutils
     wl-clipboard
-    parted
-    gparted
 
     git
-    util-linux
-    usbutils
     tree
-    ripgrep
-    curl
-    wget
+    parted
+    gparted
     htop
     neofetch
-    zip
-    unzip
-    file
+    dos2unix
+    # texlive.combined.scheme-medium
+
     bc
     calc
+    curl
+    wget
+    zip
+    unzip
+    ripgrep
     ffmpeg
-    dos2unix
+    poppler_utils # e.g. pdfunite
     tldr
     sl
     cowsay
-    poppler_utils # e.g. pdfunite
-    # texlive.combined.scheme-medium
-    ydotool
 
-    ntfs3g
+    util-linux
+    usbutils
+    ydotool
 
     nixos-option
     nix-index
@@ -217,6 +217,7 @@
     # wineWowPackages.waylandFull winetricks
     lutris
 
+    ntfs3g
     sshfs
   ];
 
