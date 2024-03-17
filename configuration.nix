@@ -170,10 +170,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nano # Just to make sure there is an editor
-    coreutils
     wl-clipboard
 
     git
+    gnumake
+    file
     tree
     parted
     gparted
