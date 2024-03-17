@@ -16,6 +16,7 @@
     shellcheck
     shfmt
 
+    marksman
     nodePackages.markdownlint-cli
     python311Packages.mdformat
 
