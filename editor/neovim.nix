@@ -22,6 +22,8 @@ let
     nvim-treesitter-endwise
     playground
 
+    nvim-lint
+
     indent-blankline-nvim
     vim-surround
     nvim-autopairs
