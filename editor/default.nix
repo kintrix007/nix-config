@@ -9,6 +9,8 @@
   environment.systemPackages = with pkgs; [
     nil # One Nix LSP
     rnix-lsp # Another Nix LSP
+    nixpkgs-fmt
+    alejandra
 
     nodePackages.bash-language-server
     shfmt
