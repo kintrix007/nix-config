@@ -10,16 +10,15 @@
     nil # One Nix LSP
     rnix-lsp # Another Nix LSP
     nixpkgs-fmt
-    alejandra
+    alejandra # A Nix formatter
 
     nodePackages.bash-language-server
-    shfmt
     shellcheck
+    shfmt
 
-    python311Packages.mdformat # Not yet used
     nodePackages.markdownlint-cli
+    python311Packages.mdformat
 
-    gnumake
     gcc
     clang-tools
 
@@ -28,13 +27,15 @@
 
     python311
     nodePackages.pyright
+    python311Packages.flake8
     python311Packages.autopep8
 
     lua
     lua-language-server
 
-    # unstable.cargo
-    # unstable.rust-analyzer
+    commitlint
+    nodePackages.jsonlint
+    yamllint
 
     haskell.compiler.ghc928
     (haskell-language-server.override {
