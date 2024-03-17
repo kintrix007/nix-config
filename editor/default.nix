@@ -16,7 +16,7 @@
     shfmt
     shellcheck
 
-    python311Packages.mdformat
+    python311Packages.mdformat # Not yet used
     nodePackages.markdownlint-cli
 
     gnumake
