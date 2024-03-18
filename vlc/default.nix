@@ -11,4 +11,7 @@ in
   environment.sessionVariables = {
     VLC_PLUGIN_PATH = "${vlc-bittorent}";
   };
+
+  # For Chromecast support
+  networking.firewall.allowedTCPPorts = [ 8010 ];
 }
