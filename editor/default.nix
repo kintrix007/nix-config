@@ -16,6 +16,9 @@
     shellcheck
     shfmt
 
+    # Inline Snapshot Testing/Golden Master Testing tool
+    python311Packages.cram
+
     marksman
     nodePackages.markdownlint-cli
     python311Packages.mdformat
