@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 
 {
-  virtualisation.waydroid.enable = true; # Leads to dangling symlinks
+  # virtualisation.waydroid.enable = true; # Leads to dangling symlinks
   # virtualisation.docker.enable = true;
   virtualisation.podman = {
     enable = true;
@@ -14,6 +14,6 @@
   environment.systemPackages = with pkgs; [
       qemu_full
       virt-manager
-      gnome.gnome-boxes
+      # gnome.gnome-boxes
   ];
 }
