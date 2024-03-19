@@ -9,7 +9,11 @@ in
   ];
 
   environment.sessionVariables = {
-    VLC_PLUGIN_PATH = "${vlc-bittorent}";
+    VLC_PLUGIN_PATH =
+      if pkgs.unstable ? vlc-bittorrent then
+        "${pkgs.unstable.vlc-bittorrent}"
+      else
+        "${vlc-bittorent}";
   };
 
   # For Chromecast support
