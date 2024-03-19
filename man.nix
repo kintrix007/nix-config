@@ -8,7 +8,7 @@
   environment.systemPackages = with pkgs; [
     # Oh wow, didn't realize this is not default
     man-pages
-    linux-doc
+    # linux-doc
     linux-manual
     linuxHeaders
 

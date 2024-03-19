@@ -139,7 +139,7 @@
       mpv
       libgourou # To remove DRM from .acsm files
 
-      jetbrains.clion
+      # jetbrains.clion
       jetbrains.idea-ultimate
       jetbrains.rider
 
