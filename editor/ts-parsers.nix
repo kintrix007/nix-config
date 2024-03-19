@@ -1,48 +1,48 @@
 { pkgs }:
 
 with pkgs.vimPlugins.nvim-treesitter-parsers; [
-  lua
-  teal
-  c
-  cpp
-  rust
-  zig
-  haskell
   agda
+  awk
+  bash
+  c
+  c_sharp
+  cpp
+  haskell
+  janet_simple
+  javascript
+  julia
+  lua
+  nim
   nix
   python
-  bash
-  awk
-  typescript
-  javascript
-  tsx
-  janet_simple
-  julia
-  vim
-  vala
-  v
-  nim
+  rust
   sql
-  c_sharp
+  teal
+  tsx
+  typescript
+  v
+  vala
+  vim
+  zig
 
-  passwd
-  udev
-  ssh_config
+  cmake
   diff
   jq
-  cmake
   make
+  passwd
+  ssh_config
+  udev
 
-  markdown
-  markdown_inline
-  yaml
-  json
-  jsonc
-  json5
-  toml
-  xml
-  doxygen
-  dockerfile
   csv
   dhall
+  dockerfile
+  doxygen
+  json
+  json5
+  jsonc
+  markdown
+  markdown_inline
+  toml
+  xml
+  yaml
 ]
