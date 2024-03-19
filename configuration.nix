@@ -141,7 +141,7 @@
 
       # jetbrains.clion
       jetbrains.idea-ultimate
-      jetbrains.rider
+      # jetbrains.rider
 
       itch
       butler
