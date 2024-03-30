@@ -105,8 +105,17 @@
   services.xserver.enable = true;
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.printing.drivers = [ pkgs.gutenprint ];
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      gutenprint
+      foomatic-filters
+      foomatic-db
+      foomatic-db-nonfree
+      foomatic-db-ppds
+      foomatic-db-engine
+    ];
+  };
 
   hardware.opengl.enable = true;
   hardware.opengl.extraPackages = with pkgs; [
