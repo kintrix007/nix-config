@@ -53,9 +53,9 @@
   networking.hostName = "yoshi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # networking.hosts = {
-  #   "192.168.178.122" = [ "rw1" ];
-  # };
+  networking.hosts = {
+    "192.168.178.188" = [ "rwgov" ];
+  };
 
   services.udev.extraRules = ''
     # ST-LINK/V2
