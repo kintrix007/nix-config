@@ -12,6 +12,7 @@ let
     vim-fugitive
     comment-nvim
 
+    dressing-nvim
     telescope-nvim
     # Needed for telescope
     plenary-nvim
