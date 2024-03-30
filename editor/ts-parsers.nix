@@ -7,6 +7,8 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   c
   c_sharp
   cpp
+  dart
+  gdscript
   haskell
   janet_simple
   javascript
