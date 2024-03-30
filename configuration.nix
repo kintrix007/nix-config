@@ -216,6 +216,7 @@
     konsole
     firefox
     w3m # A nice text-based browser
+    tiv # A nice terminal image-viewer
     thunderbird
     authenticator
     okular
