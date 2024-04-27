@@ -221,6 +221,8 @@
     authenticator
     okular
     filelight
+    aseprite
+    gimp
 
     libdecor
 
@@ -249,7 +251,7 @@
 
   # Enable the OpenSSH daemon.
   services.openssh = {
-    enable = true;
+    enable = false;
     # require public key authentication for better security
     settings.PasswordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;

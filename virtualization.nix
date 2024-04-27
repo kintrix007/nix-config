@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
       qemu_full
       virt-manager
+      distrobox
       # gnome.gnome-boxes
   ];
 }
