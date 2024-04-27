@@ -12,20 +12,21 @@
       ./home-manager
       ./hardware-configuration.nix
 
-      ./nix-ld.nix
-      ./vlc
-      ./gnome
+      ./aseprite.nix
       ./editor
-      ./terminal
-      ./fprint.nix
-      ./postgres.nix
-      ./man.nix
       ./fonts.nix
+      ./fprint.nix
+      ./gnome
       ./input.nix
+      ./man.nix
+      ./nix-alien.nix
+      ./nix-ld.nix
+      ./postgres.nix
       ./sound.nix
       ./steam.nix
+      ./terminal
       ./virtualization.nix
-      ./nix-alien.nix
+      ./vlc
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -168,7 +169,6 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    "python-2.7.18.6" # For Aseprite
     "electron-11.5.0" # For Itch Desktop
   ];
 
@@ -221,7 +221,6 @@
     authenticator
     okular
     filelight
-    aseprite
     gimp
 
     libdecor
