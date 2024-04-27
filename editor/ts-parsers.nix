@@ -6,6 +6,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   bash
   c
   c_sharp
+  java
   cpp
   dart
   gdscript
