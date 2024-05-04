@@ -8,28 +8,33 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ./nix-unstable.nix
-      ./home-manager
       ./hardware-configuration.nix
+      ./home-manager
+      ./nix-unstable.nix
 
       ./aseprite.nix
+      ./disks.nix
       ./editor
       ./fonts.nix
       ./fprint.nix
       ./gnome
       ./input.nix
+      ./locale.nix
       ./man.nix
       ./nix-alien.nix
       ./nix-ld.nix
       ./postgres.nix
+      ./print.nix
       ./sound.nix
       ./steam.nix
       ./terminal
+      ./users.nix
       ./virtualization.nix
       ./vlc
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -37,19 +42,6 @@
   boot.blacklistedKernelModules = [
     "hid-sensor-hub" # To make the brightness buttons work on Framework 13
   ];
-
-  swapDevices = [
-    {
-      device = "/var/lib/swapfile";
-      size = 16 * 1024;
-    }
-  ];
-
-  fileSystems."/games" = {
-    device = "/dev/disk/by-uuid/fbdff21a-1844-4b94-b28a-59c1bc9cef8c";
-    fsType = "auto";
-    options = [ "defaults" "rw" "nofail" "user" "exec" ];
-  };
 
   networking.hostName = "yoshi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -77,6 +69,16 @@
     # };
   };
 
+  services.flatpak.enable = true;
+
+  programs.git = {
+    enable = true;
+    package = pkgs.gitFull;
+  };
+
+  programs.java.enable = true;
+  programs.dconf.enable = true;
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -87,76 +89,8 @@
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable CUPS to print documents.
-  services.printing = {
-    enable = true;
-    drivers = with pkgs; [
-      gutenprint
-      foomatic-filters
-      foomatic-db
-      foomatic-db-nonfree
-      foomatic-db-ppds
-      foomatic-db-engine
-    ];
-  };
-
-  hardware.opengl.enable = true;
-  hardware.opengl.extraPackages = with pkgs; [
-    intel-media-driver
-    vaapiIntel
-    ocl-icd
-    intel-compute-runtime
-  ];
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.kin = {
-    isNormalUser = true;
-    description = "kin";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      # ! Do not add docker group. That is basically the same as root.
-      # "docker"
-    ];
-    packages = with pkgs; [
-      gh
-      # vscode
-      # neovim
-      vscodium
-
-      # vlc
-      mpv
-      libgourou # To remove DRM from .acsm files
-
-      # jetbrains.clion
-      jetbrains.idea-ultimate
-      # jetbrains.rider
-
-      itch
-      butler
-    ];
-  };
 
   nixpkgs.overlays = [
     # (final: prev:
@@ -172,16 +106,12 @@
     "electron-11.5.0" # For Itch Desktop
   ];
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nano # Just to make sure there is an editor
     wl-clipboard
 
-    git
     gnumake
     file
     tree
@@ -222,6 +152,7 @@
     okular
     filelight
     gimp
+    anki
 
     libdecor
 
@@ -233,21 +164,6 @@
     sshfs
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-  programs.java.enable = true;
-  programs.dconf.enable = true;
-
-  # List services that you want to enable:
-
-  # Enable flatpak support
-  services.flatpak.enable = true;
-
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = false;
@@ -255,6 +171,14 @@
     settings.PasswordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
   };
+
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = (pkgs.lib.range 16500 16600) ++ [ ];
