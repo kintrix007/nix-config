@@ -37,6 +37,9 @@
     lua
     lua-language-server
 
+    # A Rust REPL
+    evcxr
+
     # commitlint
     # gitlint
     nodePackages.jsonlint
