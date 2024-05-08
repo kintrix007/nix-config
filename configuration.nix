@@ -27,6 +27,7 @@
       ./print.nix
       ./sound.nix
       ./steam.nix
+      ./storage.nix
       ./terminal
       ./users.nix
       ./virtualization.nix
