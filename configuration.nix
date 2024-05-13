@@ -19,6 +19,7 @@
       ./fprint.nix
       ./gnome
       ./input.nix
+      ./kmonad
       ./locale.nix
       ./man.nix
       ./nix-alien.nix

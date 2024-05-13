@@ -6,6 +6,7 @@
     # gsconnect
     appindicator
     blur-my-shell
+    kmonad-toggle
   ];
 
   programs.kdeconnect = {
