@@ -5,6 +5,10 @@
     ./nixos-module.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    haskellPackages.kmonad
+  ];
+
   services.kmonad = {
     # enable = true;
     # keyboards = {
