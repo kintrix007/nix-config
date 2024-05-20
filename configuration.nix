@@ -50,6 +50,7 @@
 
   networking.hosts = {
     "192.168.178.188" = [ "rwgov" ];
+    "4.223.120.96" = [ "az1" ];
   };
 
   services.udev.extraRules = ''
