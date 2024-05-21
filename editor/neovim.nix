@@ -34,6 +34,9 @@ let
     nvim-web-devicons
 
     copilot-lua
+
+    # For the KMonad configuration language
+    kmonad-vim
   ] ++ parsers ++ themes;
 in
 {
