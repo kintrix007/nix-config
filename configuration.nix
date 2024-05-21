@@ -18,8 +18,7 @@
       ./fonts.nix
       ./fprint.nix
       ./gnome
-      ./input.nix
-      ./kmonad
+      ./input
       ./locale.nix
       ./man.nix
       ./nix-alien.nix

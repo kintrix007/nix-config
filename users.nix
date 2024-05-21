@@ -10,6 +10,10 @@
       "wheel"
       # ! Do not add docker group. That is basically the same as root.
       # "docker"
+
+      # For KMonad
+      "input"
+      "uinput"
     ];
     packages = with pkgs; [
       gh
