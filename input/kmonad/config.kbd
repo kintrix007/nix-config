@@ -18,15 +18,15 @@
 )
 
 (defalias
-    a (tap-hold-next-release 200 a lalt)
-    s (tap-hold-next-release 200 s lmet)
+    a (tap-hold-next-release 200 a lmet)
+    s (tap-hold-next-release 200 s lalt)
     d (tap-hold-next-release 200 d lsft)
     f (tap-hold-next-release 200 f lctl)
 
     j (tap-hold-next-release 200 j lctl)
     k (tap-hold-next-release 200 k lsft)
-    l (tap-hold-next-release 200 l lmet)
-    ; (tap-hold-next-release 200 ; lalt)
+    l (tap-hold-next-release 200 l lalt)
+    ; (tap-hold-next-release 200 ; lmet)
 )
 
 (deflayer layer1
