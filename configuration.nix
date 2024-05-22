@@ -120,6 +120,7 @@
     parted
     gparted
     htop
+    btop
     neofetch
     dos2unix
     # texlive.combined.scheme-medium
