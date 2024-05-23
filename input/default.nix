@@ -7,7 +7,7 @@
   ];
 
   services.xserver.xkb = {
-    options = "compose:rctrl";
+    options = "compose:rctrl,caps:swapescape";
     layout = "us";
     variant = "";
   };
