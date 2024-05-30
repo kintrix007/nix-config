@@ -6,12 +6,12 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   bash
   c
   c_sharp
-  java
   cpp
   dart
   gdscript
   haskell
   janet_simple
+  java
   javascript
   julia
   lua
@@ -21,6 +21,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   rust
   sql
   teal
+  terraform
   tsx
   typescript
   v
