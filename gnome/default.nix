@@ -29,7 +29,8 @@
     pkgs.gnome-connections
     pkgs.gnome-photos
     pkgs.gnome-tour
-    pkgs.gnome-console
+    # Do not uncomment. Only Gnome Console supports screen keyboards
+    # pkgs.gnome-console
     # gnome-weather
     # gnome-extensions # What is the name of it?
     # gnome-calculator gnome-calendar gnome-characters gnome-clocks 

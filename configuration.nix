@@ -63,7 +63,7 @@
 
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     # publish = {
     #   enable = true;
     #   addresses = true;
@@ -146,6 +146,17 @@
     nix-index
     nix-prefetch-scripts
 
+    # vscode
+    # neovim
+    vscodium
+    # jetbrains.clion
+    jetbrains.idea-ultimate
+    # jetbrains.rider
+
+    # vlc
+    mpv
+    libgourou # To remove DRM from .acsm files
+
     konsole
     firefox
     w3m # A nice text-based browser
@@ -156,6 +167,11 @@
     filelight
     gimp
     anki
+    # * Depends on butler
+    # itch
+    # * Currently broken
+    # butler
+
 
     libdecor
 

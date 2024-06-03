@@ -17,20 +17,6 @@
     ];
     packages = with pkgs; [
       gh
-      # vscode
-      # neovim
-      vscodium
-
-      # vlc
-      mpv
-      libgourou # To remove DRM from .acsm files
-
-      # jetbrains.clion
-      jetbrains.idea-ultimate
-      # jetbrains.rider
-
-      itch
-      butler
     ];
   };
 }
