@@ -39,6 +39,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    gnome.dconf-editor
     gnomecast
     gnome.nautilus-python
     epiphany
