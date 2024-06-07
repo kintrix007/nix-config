@@ -165,6 +165,7 @@
     thunderbird
     authenticator
     okular
+    foliate # Epub reader
     filelight
     gimp
     anki
