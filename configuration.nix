@@ -132,6 +132,7 @@
     zip
     unzip
     ripgrep
+    fd
     ffmpeg
     poppler_utils # e.g. pdfunite
     tldr

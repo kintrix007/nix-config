@@ -18,10 +18,12 @@ let
     plenary-nvim
     undotree
 
-    nvim-treesitter
-    nvim-treesitter-context
-    nvim-treesitter-endwise
-    playground
+    # Temporarily needs unstable for the Haskell parser
+    pkgs.unstable.vimPlugins.nvim-treesitter
+    pkgs.unstable.vimPlugins.nvim-treesitter-context
+    pkgs.unstable.vimPlugins.nvim-treesitter-endwise
+    pkgs.unstable.vimPlugins.nvim-treesitter-refactor
+    pkgs.unstable.vimPlugins.playground
 
     nvim-lint
 

@@ -47,6 +47,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   markdown
   markdown_inline
   toml
+  vimdoc
   xml
   yaml
 ]
