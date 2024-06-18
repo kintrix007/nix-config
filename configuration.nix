@@ -125,6 +125,7 @@
     dos2unix
     # texlive.combined.scheme-medium
 
+    jq
     bc
     calc
     curl
