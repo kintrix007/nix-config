@@ -130,6 +130,8 @@
     calc
     curl
     wget
+    websocat
+    netcat
     zip
     unzip
     ripgrep
