@@ -12,6 +12,8 @@
       ./home-manager
       ./nix-unstable.nix
 
+      ./guix.nix
+
       ./aseprite.nix
       ./disks.nix
       ./editor
