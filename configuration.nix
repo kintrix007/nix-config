@@ -15,6 +15,7 @@
       ./guix.nix
 
       ./aseprite.nix
+      ./boot.nix
       ./disks.nix
       ./editor
       ./fonts.nix
@@ -38,13 +39,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.blacklistedKernelModules = [
-    "hid-sensor-hub" # To make the brightness buttons work on Framework 13
-  ];
 
   networking.hostName = "yoshi"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
