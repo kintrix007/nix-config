@@ -9,74 +9,26 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./home-manager
-      ./nix-unstable.nix
 
       ./guix.nix
+      ./nix
 
-      ./aseprite.nix
-      ./boot.nix
-      ./disks.nix
+      ./desktop
       ./editor
-      ./fonts.nix
-      ./fprint.nix
-      ./gnome
-      ./input
-      ./locale.nix
-      ./man.nix
-      ./nix-alien.nix
-      ./nix-ld.nix
+      ./games
+      ./media
       ./postgres.nix
-      ./print.nix
-      ./sound.nix
-      ./steam.nix
-      ./storage.nix
+      ./system
       ./terminal
       ./users.nix
-      ./virtualization.nix
-      ./vlc
     ];
 
+  # Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "yoshi"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  networking.hosts = {
-    "192.168.178.188" = [ "rwgov" ];
-    "192.168.178.181" = [ "m1" ];
-    "4.223.120.96" = [ "az1" ];
-  };
-
-  services.udev.extraRules = ''
-    # ST-LINK/V2
-    # `lsusb` lists idVendor and idProduct separated by a colon (0483:3748)
-    ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
-
-    # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
-    # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
-  '';
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    # publish = {
-    #   enable = true;
-    #   addresses = true;
-    #   domain = true;
-    # };
-  };
-
-  services.flatpak.enable = true;
-
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
-  };
-
-  programs.java.enable = true;
-  programs.dconf.enable = true;
+  time.timeZone = "Europe/Amsterdam";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -85,28 +37,12 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Amsterdam";
+  networking.hosts = {
+    "192.168.178.188" = [ "rwgov" ];
+    "192.168.178.181" = [ "m1" ];
+    "4.223.120.96" = [ "az1" ];
+  };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  nixpkgs.overlays = [
-    # (final: prev:
-    #   let
-    #     nixd = fetchTarball "https://github.com/nix-community/nixd/archive/master.tar.gz";
-    #   in
-    #   pkgs.callPackage (import nixd)
-    #   # with pkgs; import nixd  { inherit lib stdenv nix pkg-config llvmPackages bison meson gtest flex lit ninja boost182 libbacktrace nixpkgs-fmt; }
-    # )
-  ];
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-11.5.0" # For Itch Desktop
-  ];
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
     nano # Just to make sure there is an editor
     wl-clipboard
@@ -133,7 +69,6 @@
     unzip
     ripgrep
     fd
-    ffmpeg
     poppler_utils # e.g. pdfunite
     tldr
     sl
@@ -154,46 +89,57 @@
     jetbrains.idea-ultimate
     # jetbrains.rider
 
-    # vlc
-    mpv
-    libgourou # To remove DRM from .acsm files
-
     konsole
     firefox
     firefox-devedition
     w3m # A nice text-based browser
-    tiv # A nice terminal image-viewer
     thunderbird
     authenticator
-    okular
-    foliate # Epub reader
     filelight
-    gimp
-    # * Depends on butler
-    # itch
-    # * Currently broken
-    # butler
     anki
 
     protonvpn-gui
 
     libdecor
 
-    wineWowPackages.stable
-    # wineWowPackages.waylandFull winetricks
-    lutris
-
     ntfs3g
     sshfs
   ];
 
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = false;
-    # require public key authentication for better security
-    settings.PasswordAuthentication = false;
-    settings.KbdInteractiveAuthentication = false;
+  services = {
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+    };
+
+    # Enable the OpenSSH daemon.
+    openssh = {
+      enable = false;
+      # require public key authentication for better security
+      settings.PasswordAuthentication = false;
+      settings.KbdInteractiveAuthentication = false;
+    };
+
+    udev.extraRules = ''
+      # ST-LINK/V2
+      # `lsusb` lists idVendor and idProduct separated by a colon (0483:3748)
+      ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
+
+      # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
+      # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
+    '';
+
+    flatpak.enable = true;
   };
+
+
+  programs.java.enable = true;
+  programs.dconf.enable = true;
+  programs.git = {
+    enable = true;
+    package = pkgs.gitFull;
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

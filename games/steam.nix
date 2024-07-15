@@ -20,17 +20,6 @@ in
     gamescopeSession.enable = true;
   };
 
-  programs.gamemode.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    mangohud
-    protonup
-    # The following is wrong incorrect
-    # (writeShellScriptBin "protonup" ''
-    #   ${protonup}/bin/protonup -d "${protonDir}" "$@"
-    # '')
-  ];
-
   environment.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = protonDir;
   };
