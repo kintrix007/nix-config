@@ -169,12 +169,13 @@
     foliate # Epub reader
     filelight
     gimp
-    anki
     # * Depends on butler
     # itch
     # * Currently broken
     # butler
+    anki
 
+    protonvpn-gui
 
     libdecor
 
