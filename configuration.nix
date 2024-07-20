@@ -112,6 +112,9 @@
       nssmdns4 = true;
     };
 
+    # Firmware updater
+    fwupd.enable = true;
+
     # Enable the OpenSSH daemon.
     openssh = {
       enable = false;
