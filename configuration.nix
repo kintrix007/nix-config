@@ -87,6 +87,7 @@ in
     nixos-option
     nix-index
     nix-prefetch-scripts
+    patchelf
 
     # vscode
     # neovim
