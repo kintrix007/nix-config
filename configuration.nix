@@ -76,7 +76,6 @@
 
     util-linux
     usbutils
-    ydotool
 
     nixos-option
     nix-index
@@ -138,6 +137,7 @@
 
   programs.java.enable = true;
   programs.dconf.enable = true;
+  programs.ydotool.enable = true;
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
