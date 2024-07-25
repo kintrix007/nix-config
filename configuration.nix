@@ -4,11 +4,18 @@
 
 { config, pkgs, ... }:
 
+let
+  nixos-hardware = builtins.fetchGit {
+    url = "https://github.com/NixOS/nixos-hardware.git";
+    ref = "master"; # Auto-update on rebuild
+  };
+in
 {
   imports =
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      "${nixos-hardware}/framework/13-inch/13th-gen-intel"
 
       ./guix.nix
       ./nix
