@@ -10,6 +10,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   dart
   elm
   gdscript
+  gleam
   haskell
   janet_simple
   java
