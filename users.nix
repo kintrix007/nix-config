@@ -12,6 +12,9 @@
         # ! Do not add docker group. That is basically the same as root.
         # "docker"
 
+        # For virt-manager
+        "libvirtd"
+
         # For KMonad
         "input"
         "uinput"

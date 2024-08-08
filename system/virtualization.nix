@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   # virtualisation.waydroid.enable = true; # Leads to dangling symlinks
@@ -10,11 +10,11 @@
   };
 
   virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
-      qemu_full
-      virt-manager
-      distrobox
-      # gnome.gnome-boxes
+    qemu_full
+    distrobox
+    # gnome.gnome-boxes
   ];
 }
