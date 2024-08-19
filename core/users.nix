@@ -32,4 +32,7 @@
   };
 
   users.groups.itch = {};
+
+  # ! READ THE `nixos-option` PAGE ON THIS !
+  # users.mutableUsers = false;
 }

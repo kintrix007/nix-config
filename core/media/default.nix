@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./aseprite.nix
     ./vlc.nix
   ];
 
