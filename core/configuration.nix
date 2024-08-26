@@ -101,13 +101,20 @@
     flatpak.enable = true;
   };
 
+  programs = {
+    java.enable = true;
+    dconf.enable = true;
+    ydotool.enable = true;
 
-  programs.java.enable = true;
-  programs.dconf.enable = true;
-  programs.ydotool.enable = true;
-  programs.git = {
-    enable = true;
-    package = pkgs.gitFull;
+    git = {
+      enable = true;
+      package = pkgs.gitFull;
+    };
+
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
   };
 
 
