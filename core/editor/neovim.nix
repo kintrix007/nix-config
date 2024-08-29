@@ -25,6 +25,7 @@ let
     pkgs.vimPlugins.playground
 
     nvim-lint
+    nvim-dap
 
     indent-blankline-nvim
     vim-surround
