@@ -73,7 +73,6 @@
 
       authenticator
       filelight
-      firefox
       konsole
       libdecor
       thunderbird
@@ -105,6 +104,7 @@
   # xdg.portal.enable = true;
 
   programs = {
+    firefox.enable = true;
     java.enable = true;
     dconf.enable = true;
     ydotool.enable = true;
