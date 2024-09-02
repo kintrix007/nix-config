@@ -14,7 +14,6 @@
       ./postgres.nix
       ./system
       ./terminal
-      ./users.nix
     ];
 
   # Nix settings

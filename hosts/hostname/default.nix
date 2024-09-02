@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./configuration
+    ./configuration.nix
+    ./users.nix
 
     # ../../shared/cups
     # ../../shared/fprintd

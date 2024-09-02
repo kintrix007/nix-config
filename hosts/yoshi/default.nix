@@ -5,6 +5,8 @@
     ./configuration.nix
     ./boot.nix
     ./fs.nix
+    ./home-manager.nix
+    ./users.nix
 
     ../../shared/aseprite
     ../../shared/cups
