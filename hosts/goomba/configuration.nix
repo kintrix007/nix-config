@@ -27,6 +27,8 @@ in
   environment.systemPackages = with pkgs; [
     vscodium
     firefox-devedition
+
+    keepassxc
   ];
 
   programs = { };
