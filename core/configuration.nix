@@ -100,6 +100,10 @@
     flatpak.enable = true;
   };
 
+  # For flatpak
+  # ! NOTE: Instead enable it where you enable your desktop!
+  # xdg.portal.enable = true;
+
   programs = {
     java.enable = true;
     dconf.enable = true;
