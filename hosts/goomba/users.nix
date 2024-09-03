@@ -10,6 +10,10 @@
         "networkmanager"
         "wheel"
         "virt-manager"
+
+        # ? May be necessary for DR Sprinto?
+        # "video"
+        # "render"
       ];
       packages = with pkgs; [ ];
     };
