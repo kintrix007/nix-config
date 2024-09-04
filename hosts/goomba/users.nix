@@ -9,7 +9,9 @@
       extraGroups = [
         "networkmanager"
         "wheel"
-        "virt-manager"
+
+        # For virt-manager
+        "libvirtd"
 
         # ? May be necessary for DR Sprinto?
         # "video"
