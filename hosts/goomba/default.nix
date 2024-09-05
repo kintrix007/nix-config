@@ -10,5 +10,6 @@
     ../../shared/cups
     ../../shared/desktop/gnome
     ../../shared/fprintd
+    ../../shared/scrtxt
   ];
 }
