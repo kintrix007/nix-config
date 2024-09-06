@@ -24,7 +24,8 @@
         tesseract area.png area 2>/dev/null
 
         wl-copy -n < area.txt
-        notify-send "Screenshot Read" \
+        notify-send -a "scrtxt" -i "display" -t 1000 -u normal \
+          "Screenshot Read" \
           "The text in the screenshot has been copied to your clipboard"
         cat area.txt
       '';
