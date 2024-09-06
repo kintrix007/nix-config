@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env nix-shell
+#!nix-shell -p vim bash
+#!nix-shell -i bash
 
 set -e
 
@@ -19,7 +21,7 @@ fi
 
 cd "${BASH_SOURCE:-$0}"
 ln -s "$PWD" /etc/nixos
-:ixos-generate-config
+nixos-generate-config
 cp configuration.nix.skel configuration.nix
 vim configuration.nix # Specify which host and stateVersion to use
 nixos-rebuild switch --upgrade
