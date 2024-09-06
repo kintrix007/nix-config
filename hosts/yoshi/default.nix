@@ -15,5 +15,6 @@
     ../../shared/games
     ../../shared/guix
     ../../shared/home-manager
+    ../../shared/scrtxt
   ];
 }
