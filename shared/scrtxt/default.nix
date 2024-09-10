@@ -19,7 +19,7 @@
 
         cd "$TMP"
         gnome-screenshot -a -f area.png
-        mogrify -modulate 100,0 -resize 400% area.png
+        mogrify -modulate 100,0 -resize 200% area.png
         # ? Image to text
         tesseract area.png area 2>/dev/null
 
