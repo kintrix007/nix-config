@@ -27,8 +27,11 @@ in
   environment.systemPackages = with pkgs; [
     vscodium
     firefox-devedition
+    android-studio
+    android-studio-tools
 
     keepassxc
+    wireguard-tools
   ];
 
   programs = { };
