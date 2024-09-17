@@ -6,6 +6,7 @@
     ./users.nix
 
     ./drsprinto.nix
+    ./vpn
 
     ../../shared/cups
     ../../shared/desktop/gnome
