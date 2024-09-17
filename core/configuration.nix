@@ -66,6 +66,7 @@
       cowsay
       fd
       ntfs3g
+      exfat
       sl
       sshfs
       tldr
