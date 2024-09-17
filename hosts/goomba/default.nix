@@ -6,6 +6,7 @@
     ./users.nix
 
     ./drsprinto.nix
+    ./luks.nix
     ./vpn
 
     ../../shared/cups
