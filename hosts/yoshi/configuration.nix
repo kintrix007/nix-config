@@ -37,6 +37,13 @@ in
     jetbrains.idea-ultimate
     # jetbrains.rider
 
+    # Embedded/robotics tools
+    arduino-ide
+    arduino-cli
+    arduino-language-server
+    freecad
+    octoprint
+
     firefox-devedition
     tor-browser
     protonvpn-gui
@@ -47,10 +54,13 @@ in
     udev.extraRules = ''
       # ST-LINK/V2
       # `lsusb` lists idVendor and idProduct separated by a colon (0483:3748)
-      ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
+      # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
 
       # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
       # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
+
+      # Robohouse Hackathon
+      ATTRS{idVendor}=="303a", ATTRS{idProduct}=="1001", MODE="0666"
     '';
   };
 }
