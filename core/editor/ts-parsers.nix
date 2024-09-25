@@ -6,20 +6,33 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   bash
   c
   c_sharp
+  cmake
   cpp
+  css
   dart
   elm
+  fish
   gdscript
+  gdshader
+  git_config
+  git_rebase
+  gitattributes
+  gitcommit
+  gitignore
   gleam
   haskell
   janet_simple
   java
   javascript
+  jq
   julia
   lua
+  make
+  meson
   nim
   nix
   python
+  regex
   rust
   sql
   teal
@@ -31,10 +44,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   vim
   zig
 
-  cmake
   diff
-  jq
-  make
   passwd
   ssh_config
   udev
@@ -50,6 +60,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   markdown_inline
   toml
   vimdoc
+  xml
   xml
   yaml
 ]
