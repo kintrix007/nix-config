@@ -29,6 +29,7 @@ in
     firefox-devedition
     android-studio
     android-studio-tools
+    dbeaver-bin
 
     keepassxc
     wireguard-tools
