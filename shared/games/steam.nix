@@ -8,7 +8,7 @@ in
   hardware.opengl.enable = true;
   hardware.opengl.extraPackages = with pkgs; [
     intel-media-driver
-    vaapiIntel
+    # vaapiIntel
     ocl-icd
     intel-compute-runtime
   ];
