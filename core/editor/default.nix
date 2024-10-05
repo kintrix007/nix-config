@@ -16,8 +16,8 @@
     shellcheck
     shfmt
 
-    terraform
-    terraform-ls
+    # terraform
+    # terraform-ls
 
     # Inline Snapshot Testing/Golden Master Testing tool
     python311Packages.cram
