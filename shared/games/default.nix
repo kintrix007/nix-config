@@ -19,8 +19,7 @@
     #   ${protonup}/bin/protonup -d "${protonDir}" "$@"
     # '')
 
-    wineWowPackages.stable
-    wineWowPackages.waylandFull
+    wine-wayland
     winetricks
   ];
 
