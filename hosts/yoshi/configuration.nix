@@ -37,6 +37,8 @@ in
     jetbrains.idea-ultimate
     # jetbrains.rider
 
+    android-tools
+
     # Embedded/robotics tools
     arduino-ide
     arduino-cli
