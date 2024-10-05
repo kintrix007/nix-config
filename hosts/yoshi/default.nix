@@ -13,7 +13,7 @@
     ../../shared/desktop/gnome
     ../../shared/fprintd
     ../../shared/games
-    ../../shared/guix
+    # ../../shared/guix
     ../../shared/home-manager
     ../../shared/scrtxt
   ];
