@@ -6,6 +6,7 @@
     # gsconnect
     appindicator
     blur-my-shell
+    color-picker
     kmonad-toggle
   ];
 
