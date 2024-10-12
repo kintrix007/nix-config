@@ -11,6 +11,7 @@
     source-code-pro
     dejavu_fonts
     carlito
+    roboto
 
     # For JP, apparently?
     ipafont
