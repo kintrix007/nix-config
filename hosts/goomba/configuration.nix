@@ -26,6 +26,7 @@ in
 
   environment.systemPackages = with pkgs; [
     vscodium
+    jetbrains.rider
     firefox-devedition
     android-studio
     android-studio-tools
