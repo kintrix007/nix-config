@@ -8,7 +8,8 @@
 
   environment.systemPackages = with pkgs; [
     nil # One Nix LSP
-    # rnix-lsp # Currently depends on an old insecure version of nix
+    nixd # Apparently better than Nil
+    nixfmt-rfc-style
     nixpkgs-fmt
     alejandra # A Nix formatter
 
