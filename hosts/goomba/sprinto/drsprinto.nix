@@ -1,9 +1,10 @@
-{ lib
-, lsb-release
-, stdenv
-, vulkan-tools
-, appimageTools
-, makeWrapper
+{
+  lib,
+  # lsb-release,
+  stdenv,
+  # vulkan-tools,
+  appimageTools,
+  makeWrapper,
 }:
 
 let
@@ -14,18 +15,17 @@ let
   appimage = appimageTools.wrapType2 {
     inherit pname version src;
 
-    extraPkgs = pkgs: with pkgs; [
-      lsb-release # Otherwise it fails to get system info
+    extraPkgs =
+      pkgs: with pkgs; [
+        lsb-release # Otherwise it fails to get system info
 
-      libGL
-      libglvnd
-      ffmpeg
-      amdvlk
-    ];
+        libGL
+        libglvnd
+        ffmpeg
+        amdvlk
+      ];
   };
-  appimageContents = appimageTools.extractType2 {
-    inherit pname version src;
-  };
+  appimageContents = appimageTools.extractType2 { inherit pname version src; };
 in
 
 # appimageContents
@@ -34,9 +34,7 @@ stdenv.mkDerivation {
 
   src = appimage;
 
-  nativeBuildInputs = [
-    makeWrapper
-  ];
+  nativeBuildInputs = [ makeWrapper ];
 
   buildInputs = [
     # lsb-release
