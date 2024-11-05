@@ -28,8 +28,6 @@ in
     vscodium
     jetbrains.rider
     firefox-devedition
-    android-studio
-    android-studio-tools
     dbeaver-bin
 
     keepassxc
