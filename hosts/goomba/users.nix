@@ -11,6 +11,7 @@
         "wheel"
 
         # For virt-manager
+        "kvm"
         "libvirtd"
 
         # For adb
