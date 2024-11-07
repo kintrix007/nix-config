@@ -13,6 +13,9 @@
         # For virt-manager
         "libvirtd"
 
+        # For adb
+        "adbusers"
+
         # ? May be necessary for DR Sprinto?
         # "video"
         # "render"
