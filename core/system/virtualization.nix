@@ -9,7 +9,11 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.ovmf.enable = true;
+  };
+
   programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
