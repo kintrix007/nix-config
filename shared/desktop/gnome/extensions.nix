@@ -3,11 +3,14 @@
 {
   environment.systemPackages = with pkgs.gnomeExtensions; [
     pop-shell
-    # gsconnect
     appindicator
     blur-my-shell
     color-picker
     kmonad-toggle
+
+    pano
+    pkgs.libgda6
+    pkgs.gsound
   ];
 
   programs.kdeconnect = {
