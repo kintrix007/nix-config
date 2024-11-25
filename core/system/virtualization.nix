@@ -1,8 +1,10 @@
 { pkgs, ... }:
 
 {
-  # virtualisation.waydroid.enable = true; # Leads to dangling symlinks
+  # virtualisation.waydroid.enable = true; # Crashes wayland session last I tried.
+
   # virtualisation.docker.enable = true;
+
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
