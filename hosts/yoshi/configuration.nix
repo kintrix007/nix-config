@@ -44,7 +44,6 @@ in
     arduino-cli
     arduino-language-server
     freecad
-    octoprint
 
     firefox-devedition
     tor-browser
