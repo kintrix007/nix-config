@@ -11,11 +11,10 @@ let
   };
 in
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      # "${nixos-hardware}/???"
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    # "${nixos-hardware}/???"
+  ];
 
   ############################
   #                          #
@@ -36,5 +35,10 @@ in
 
   programs = { };
 
-  services = { };
+  services = {
+    udev.extraRules = /* udev */ ''
+      SUBSYSTEM=="usb", GROUP="spice", MODE="0660"
+      SUBSYSTEM=="usb_device", GROUP="spice", MODE="0660"
+    '';
+  };
 }

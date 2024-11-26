@@ -17,6 +17,9 @@
         # For adb
         "adbusers"
 
+        # For spice-gtk
+        "spice"
+
         # ? May be necessary for DR Sprinto?
         # "video"
         # "render"
