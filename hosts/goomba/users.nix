@@ -20,6 +20,9 @@
         # For spice-gtk
         "spice"
 
+        # For ydotool
+        "ydotool"
+
         # ? May be necessary for DR Sprinto?
         # "video"
         # "render"
