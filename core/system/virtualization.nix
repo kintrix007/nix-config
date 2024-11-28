@@ -26,6 +26,7 @@
     distrobox
     # gnome.gnome-boxes
     spice-gtk
+    virtiofsd
 
     # (spice-gtk.overrideAttrs (final: prev: {
     #   # installPhase = ''
