@@ -58,6 +58,7 @@
         util-linux
         websocat
         wget
+        libxml2
         zip
       ];
     in
