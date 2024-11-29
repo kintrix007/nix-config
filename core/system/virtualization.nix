@@ -15,6 +15,7 @@
     enable = true;
     qemu.ovmf.enable = true;
     qemu.swtpm.enable = true;
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
   };
 
   virtualisation.spiceUSBRedirection.enable = true;
@@ -26,7 +27,7 @@
     distrobox
     # gnome.gnome-boxes
     spice-gtk
-    virtiofsd
+    # virtiofsd
 
     # (spice-gtk.overrideAttrs (final: prev: {
     #   # installPhase = ''
