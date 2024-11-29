@@ -22,7 +22,7 @@
     };
   };
 
-  users.defaultUserShell = pkgs.bash;
+  # users.defaultUserShell = pkgs.bash;
 
   programs.direnv = {
     enable = true;
