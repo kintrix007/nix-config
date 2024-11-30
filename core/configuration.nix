@@ -5,19 +5,22 @@
 { lib, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./nix
+  imports = [
+    ./nix
 
-      ./editor
-      ./media
-      ./postgres.nix
-      ./system
-      ./terminal
-    ];
+    ./editor
+    ./media
+    ./postgres.nix
+    ./system
+    ./terminal
+  ];
 
   # Nix settings
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+    "pipe-operators"
+  ];
   nixpkgs.config.allowUnfree = true;
 
   time.timeZone = lib.mkDefault "Europe/Amsterdam";
@@ -29,7 +32,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  environment.systemPackages = with pkgs;
+  environment.systemPackages =
+    with pkgs;
     let
       essentials = [
         bc
@@ -63,7 +67,8 @@
       ];
     in
 
-    essentials ++ [
+    essentials
+    ++ [
       cowsay
       fd
       ntfs3g
@@ -122,7 +127,6 @@
       binfmt = true;
     };
   };
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
