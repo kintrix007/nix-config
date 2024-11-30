@@ -13,7 +13,17 @@
         # "docker"
 
         # For virt-manager
+        "kvm"
         "libvirtd"
+
+        # For ydotool
+        "ydotool"
+
+        # For adb
+        "adbusers"
+
+        # For spice-gtk
+        "spice"
 
         # For KMonad
         "input"
