@@ -5,13 +5,14 @@ let
   protonDir = "/games/kin/proton";
 in
 {
-  hardware.opengl.enable = true;
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [
     intel-media-driver
     # vaapiIntel
     ocl-icd
     intel-compute-runtime
   ];
+  hardware.graphics.enable32Bit = true; # Enables support for 32bit libs that steam uses
 
   programs.steam = {
     enable = true;
@@ -29,6 +30,4 @@ in
     "steam-original"
     "steam-run"
   ];
-
-  hardware.opengl.driSupport32Bit = true; # Enables support for 32bit libs that steam uses
 }

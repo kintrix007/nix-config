@@ -6,7 +6,7 @@
       name = "scrtxt";
 
       runtimeInputs = with pkgs; [
-        gnome.gnome-screenshot
+        gnome-screenshot
         imagemagick
         libnotify
         tesseract

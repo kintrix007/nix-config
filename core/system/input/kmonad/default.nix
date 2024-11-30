@@ -1,17 +1,6 @@
 { pkgs, ... }:
 
-let
-  kmonad = fetchGit {
-    url = "https://github.com/kmonad/kmonad";
-    rev = "07cd1cb4fddb46a8d9de3bb9d06196d08b7a8ed2";
-    ref = "master";
-  };
-in
 {
-  imports = [
-    "${kmonad}/nix/nixos-module.nix"
-  ];
-
   services.kmonad = {
     enable = true;
     keyboards = {

@@ -4,7 +4,7 @@
   programs.bash = {
     # enable = true; # Should not be explicitly enabled
     blesh.enable = true;
-    enableCompletion = true;
+    completion.enable = true;
     enableLsColors = true;
     undistractMe = {
       enable = true;

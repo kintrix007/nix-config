@@ -2,7 +2,8 @@
 
 {
   i18n.inputMethod = {
-    enabled = "ibus";
+    enable = true;
+    type = "ibus";
     # 1.5.28 has some major issues:
     # https://github.com/ibus/ibus/issues/2480
     # Downgrading to 1.5.27 fixes it

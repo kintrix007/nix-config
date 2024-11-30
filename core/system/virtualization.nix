@@ -25,7 +25,7 @@
   environment.systemPackages = with pkgs; [
     qemu_full
     distrobox
-    # gnome.gnome-boxes
+    # gnome-boxes
     spice-gtk
     # virtiofsd
 

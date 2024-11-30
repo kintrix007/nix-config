@@ -10,7 +10,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  environment.gnome.excludePackages = with pkgs.gnome; [
+  environment.gnome.excludePackages = with pkgs; [
     # baobab      # disk usage analyzer
     # cheese      # photo booth
     # eog         # image viewer
@@ -27,10 +27,10 @@
     # these should be self explanatory
     gnome-contacts
     gnome-music
-    pkgs.gnome-connections
-    pkgs.gnome-photos
-    pkgs.gnome-tour
-    pkgs.gnome-console
+    gnome-connections
+    gnome-photos
+    gnome-tour
+    gnome-console
     # gnome-weather
     # gnome-extensions # What is the name of it?
     # gnome-calculator gnome-calendar gnome-characters gnome-clocks 
@@ -39,9 +39,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    gnome.dconf-editor
+    dconf-editor
     gnomecast
-    gnome.nautilus-python
+    nautilus-python
     epiphany
     newsflash
 
