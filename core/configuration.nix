@@ -46,6 +46,8 @@
         gparted
         htop
         jq
+        jujutsu
+        libxml2
         nano
         neofetch
         netcat
@@ -62,7 +64,6 @@
         util-linux
         websocat
         wget
-        libxml2
         zip
       ];
     in
