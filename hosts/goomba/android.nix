@@ -7,6 +7,5 @@
     android-studio
     android-studio-tools
     android-tools
-    androidenv.androidPkgs_9_0.androidsdk
   ];
 }

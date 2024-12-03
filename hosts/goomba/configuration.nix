@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 let
   nixos-hardware = builtins.fetchGit {
@@ -33,12 +33,17 @@ in
     wireguard-tools
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    (lib.trace "Temporarily allowing 'dotnet-sdk-wrapped-7.0.410' for Jetbrains Rider. Remove this as soon as possible." "dotnet-sdk-wrapped-7.0.410")
+  ];
+
   programs = { };
 
   services = {
-    udev.extraRules = /* udev */ ''
-      SUBSYSTEM=="usb", GROUP="spice", MODE="0660"
-      SUBSYSTEM=="usb_device", GROUP="spice", MODE="0660"
-    '';
+    udev.extraRules = # udev
+      ''
+        SUBSYSTEM=="usb", GROUP="spice", MODE="0660"
+        SUBSYSTEM=="usb_device", GROUP="spice", MODE="0660"
+      '';
   };
 }
