@@ -34,7 +34,7 @@
     nodePackages.typescript-language-server
 
     python311
-    # nodePackages.pyright
+    pyright
     python311Packages.flake8
     python311Packages.autopep8
 
