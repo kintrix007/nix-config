@@ -11,11 +11,10 @@ let
   };
 in
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      "${nixos-hardware}/framework/13-inch/13th-gen-intel"
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    "${nixos-hardware}/framework/13-inch/13th-gen-intel"
+  ];
 
   ############################
   #                          #
@@ -52,16 +51,20 @@ in
   ];
 
   services = {
-    udev.extraRules = ''
-      # ST-LINK/V2
-      # `lsusb` lists idVendor and idProduct separated by a colon (0483:3748)
-      # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
+    udev.extraRules = # udev
+      ''
+        SUBSYSTEM=="usb", GROUP="spice", MODE="0660"
+        SUBSYSTEM=="usb_device", GROUP="spice", MODE="0660"
 
-      # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
-      # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
+        # ST-LINK/V2
+        # `lsusb` lists idVendor and idProduct separated by a colon (0483:3748)
+        # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="0666"
 
-      # Robohouse Hackathon
-      ATTRS{idVendor}=="303a", ATTRS{idProduct}=="1001", MODE="0666"
-    '';
+        # STM32F3DISCOVERY rev C+ - ST-LINK/V2-1
+        # ATTRS{idVendor}=="0483", ATTRS{idProduct}=="374b", TAG+="uaccess"
+
+        # Robohouse Hackathon
+        ATTRS{idVendor}=="303a", ATTRS{idProduct}=="1001", MODE="0666"
+      '';
   };
 }
