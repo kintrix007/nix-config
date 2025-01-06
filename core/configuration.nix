@@ -45,6 +45,7 @@
         gnumake
         gparted
         htop
+        imagemagick
         jq
         jujutsu
         libxml2
