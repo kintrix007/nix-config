@@ -25,6 +25,10 @@
         # For spice-gtk
         "spice"
 
+        # For mtkclient
+        "plugdev"
+        "dialout"
+
         # For KMonad
         "input"
         "uinput"
@@ -41,7 +45,10 @@
     };
   };
 
-  users.groups.itch = {};
+  users.groups = {
+    plugdev = {};
+    itch = {};
+  };
 
   # ! READ THE `nixos-option` PAGE ON THIS !
   # users.mutableUsers = false;

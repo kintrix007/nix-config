@@ -16,5 +16,7 @@
     # ../../shared/guix
     ../../shared/home-manager
     ../../shared/scrtxt
+
+    ../../shared/mtkclient-udev.nix
   ];
 }
