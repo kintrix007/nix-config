@@ -71,11 +71,12 @@
 
     essentials
     ++ [
+      cifs-utils
       cowsay
-      fd
-      ntfs3g
-      gvfs
       exfat
+      fd
+      gvfs
+      ntfs3g
       sl
       sshfs
       tldr
