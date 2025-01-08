@@ -31,6 +31,8 @@ in
 
     keepassxc
     wireguard-tools
+
+    unstable.dbvisualizer
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
