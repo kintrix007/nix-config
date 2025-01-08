@@ -2,7 +2,7 @@
 #!nix-shell -p vim bash
 #!nix-shell -i bash
 
-set -e
+set -euo pipefail
 
 gen-hash() {
   HASH="$(LC_ALL=C tr -dc 'a-f0-9' </dev/urandom | head -c 8)"
@@ -15,13 +15,13 @@ if [ -e /etc/nixos ]; then
     gen-hash
   done
 
-  mv /etc/nixos "/etc/nixos-${HASH}.bak"
+  sudo mv /etc/nixos "/etc/nixos-${HASH}.bak"
   echo "Copied previous configuration to /etc/nixos-${HASH}.bak."
 fi
 
 cd "${BASH_SOURCE:-$0}"
-ln -s "$PWD" /etc/nixos
-nixos-generate-config
+sudo ln -s "$PWD" /etc/nixos
+sudo nixos-generate-config
 cp configuration.nix.skel configuration.nix
-vim configuration.nix # Specify which host and stateVersion to use
-nixos-rebuild switch --upgrade
+$EDITOR configuration.nix # Specify which host and stateVersion to use
+sudo nixos-rebuild switch --upgrade
