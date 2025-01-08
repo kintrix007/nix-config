@@ -44,8 +44,8 @@ in
   services = {
     udev.extraRules = # udev
       ''
-        SUBSYSTEM=="usb", GROUP="spice", MODE="0660"
-        SUBSYSTEM=="usb_device", GROUP="spice", MODE="0660"
+        SUBSYSTEM=="usb", GROUP="spice", MODE="4775"
+        SUBSYSTEM=="usb_device", GROUP="spice", MODE="4775"
       '';
   };
 }
