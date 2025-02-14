@@ -9,11 +9,18 @@ let
     url = "https://github.com/NixOS/nixos-hardware.git";
     ref = "master"; # Auto-update on rebuild
   };
+
+  # epic-games-notifier = builtins.fetchGit {
+  #   url = "https://git.sr.ht/~kintrix/epic-games-notifier";
+  #   ref = "master"; # Branch reference
+  #   rev = "c16553e2556338f429406c6a9b1d66b6cf3f21c1"; # Git revision
+  # };
 in
 {
   imports = [
     # Include the results of the hardware scan.
     "${nixos-hardware}/framework/13-inch/13th-gen-intel"
+    # "${epic-games-notifier}/module.nix"
   ];
 
   ############################
