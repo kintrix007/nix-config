@@ -39,9 +39,9 @@
         bc
         btop
         calc
+        coreutils
         curl
         dos2unix
-        file
         gnumake
         gparted
         htop
@@ -51,7 +51,6 @@
         libxml2
         nano
         neofetch
-        netcat
         nix-index
         nix-prefetch-scripts
         nixos-option
@@ -76,6 +75,7 @@
       exfat
       fd
       gvfs
+      moreutils
       ntfs3g
       sl
       sshfs
