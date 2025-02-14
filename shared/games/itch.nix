@@ -3,6 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     itch
-    butler
+    # butler # Broken and abandoned upstream
   ];
 }

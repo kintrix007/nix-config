@@ -3,7 +3,7 @@
 {
   imports = [
     ./steam.nix
-    # ./itch.nix
+    ./itch.nix
   ];
 
   environment.systemPackages = with pkgs; [
