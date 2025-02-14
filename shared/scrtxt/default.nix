@@ -30,7 +30,7 @@
         wl-copy -n < area.txt
         notify-send -a "scrtxt" -i "display" -t 1000 -u normal \
           "Screenshot Read" \
-          "The text in the screenshot has been copied to your clipboard"
+          "Copied: $(<area.txt head -c30)"
         cat area.txt
       '';
     })
