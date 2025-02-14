@@ -39,6 +39,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   terraform
   tsx
   typescript
+  typst
   v
   vala
   vim
