@@ -35,7 +35,7 @@ let
     # Needed for lualine
     nvim-web-devicons
 
-    # copilot-lua
+    copilot-lua
 
     # For the KMonad configuration language
     kmonad-vim
