@@ -1,9 +1,7 @@
 { ... }:
 
 {
-  imports = [
-    ./obs.nix
-  ];
+  imports = [];
 
   home-manager.users.kin = { pkgs, ... }: {
     programs.obs-studio = {

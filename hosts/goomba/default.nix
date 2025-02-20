@@ -13,6 +13,7 @@
     ../../shared/cups
     ../../shared/desktop/gnome
     ../../shared/fprintd
+    ../../shared/obs-deps
     ../../shared/scrtxt
   ];
 }
