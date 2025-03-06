@@ -87,6 +87,7 @@
       konsole
       libdecor
       thunderbird
+      # tzclock # Analog clock
       w3m # A nice text-based browser
     ];
 

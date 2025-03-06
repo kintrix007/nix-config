@@ -9,6 +9,8 @@ let
   ];
   parsers = import ./ts-parsers.nix { inherit pkgs; };
   plugins = with pkgs.vimPlugins; [
+    nvim-lspconfig
+
     vim-fugitive
     comment-nvim
 
@@ -18,11 +20,11 @@ let
     plenary-nvim
     undotree
 
-    pkgs.vimPlugins.nvim-treesitter
-    pkgs.vimPlugins.nvim-treesitter-context
-    pkgs.vimPlugins.nvim-treesitter-endwise
-    pkgs.vimPlugins.nvim-treesitter-refactor
-    pkgs.vimPlugins.playground
+    nvim-treesitter
+    nvim-treesitter-context
+    nvim-treesitter-endwise
+    nvim-treesitter-refactor
+    playground
 
     nvim-lint
     nvim-dap
