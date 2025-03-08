@@ -55,6 +55,7 @@ in
     tor-browser
     protonvpn-gui
     anki
+    scrcpy
   ];
 
   services = {
