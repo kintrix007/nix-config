@@ -38,13 +38,13 @@
       ];
     };
 
-    wikipedia-race = {
-      isNormalUser = true;
-      description = "wikipedia-race";
-      extraGroups = [
-        "networkmanager"
-      ];
-    };
+    # wikipedia-race = {
+    #   isNormalUser = true;
+    #   description = "wikipedia-race";
+    #   extraGroups = [
+    #     "networkmanager"
+    #   ];
+    # };
 
     itch = {
       isSystemUser = true;
