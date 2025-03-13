@@ -100,6 +100,8 @@
     # Firmware updater
     fwupd.enable = true;
 
+    # tlp.enable = true;
+
     # Enable the OpenSSH daemon.
     openssh = {
       enable = false;
