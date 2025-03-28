@@ -46,13 +46,14 @@ in
     android-tools
 
     # Embedded/robotics tools
-    arduino-ide
-    arduino-cli
-    arduino-language-server
-    freecad
+    # arduino-ide
+    # arduino-cli
+    # arduino-language-server
+    # freecad
 
-    firefox-devedition
-    tor-browser
+    # firefox-devedition
+    # tor-browser
+
     protonvpn-gui
     anki
     scrcpy
