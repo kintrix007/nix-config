@@ -47,6 +47,7 @@
         htop
         imagemagick
         jq
+        yj # Tool to convert between YAML, JSON, and TOML
         unstable.jujutsu # Because of GHSA-794x-2rpg-rfgr
         libxml2
         nano
