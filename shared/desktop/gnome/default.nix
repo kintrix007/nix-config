@@ -39,6 +39,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    gnome-randr # xrandr for GNOME on Wayland
     dconf-editor
     gnomecast
     nautilus-python
