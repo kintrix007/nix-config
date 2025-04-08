@@ -47,7 +47,7 @@
         htop
         imagemagick
         jq
-        jujutsu
+        unstable.jujutsu # Because of GHSA-794x-2rpg-rfgr
         libxml2
         nano
         neofetch

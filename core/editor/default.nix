@@ -49,10 +49,8 @@
     nodePackages.jsonlint
     yamllint
 
-    haskell.compiler.ghc928
-    (haskell-language-server.override {
-      supportedGhcVersions = [ "928" ];
-    })
+    ghc
+    haskell-language-server
 
     (writeShellScriptBin "mkgitignore" ''
       if [[ $# == 0 ]]; then
