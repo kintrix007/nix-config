@@ -2,10 +2,11 @@
 
 {
   imports = [
-    ./configuration.nix
     ./boot.nix
+    ./configuration.nix
     ./fs.nix
     ./home-manager.nix
+    # ./tailscale.nix
     ./users.nix
 
     # ../../shared/guix
