@@ -9,6 +9,7 @@
     ./drsprinto.nix
     ./luks.nix
     ./vpn
+    ./wireshark.nix
 
     ../../shared/cups
     ../../shared/desktop/gnome

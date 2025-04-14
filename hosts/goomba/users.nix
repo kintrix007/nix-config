@@ -23,12 +23,19 @@
         # For ydotool
         "ydotool"
 
+        # For wireshark
+        "wireshark"
+
         # ? May be necessary for DR Sprinto?
         # "video"
         # "render"
       ];
-      packages = with pkgs; [ ];
+      packages = [ ];
     };
+  };
+
+  users.groups = {
+    wireshark = { };
   };
 
   # ! READ THE `nixos-option` PAGE ON THIS !
