@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs.gnomeExtensions; [
@@ -7,6 +7,7 @@
     blur-my-shell
     color-picker
     kmonad-toggle
+    bluetooth-battery-meter
 
     pano
     pkgs.libgda6
