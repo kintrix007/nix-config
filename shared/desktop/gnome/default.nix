@@ -33,7 +33,7 @@
     gnome-console
     # gnome-weather
     # gnome-extensions # What is the name of it?
-    # gnome-calculator gnome-calendar gnome-characters gnome-clocks 
+    # gnome-calculator gnome-calendar gnome-characters gnome-clocks
     # gnome-font-viewer gnome-logs gnome-maps gnome-screenshot
     # gnome-system-monitor gnome-disk-utility
   ];
