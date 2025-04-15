@@ -18,4 +18,13 @@
 
     package = pkgs.kmonad;
   };
+
+  # services = {
+  #   udev.extraRules = # udev
+  #     ''
+  #       # bluebuilt keyboard at work
+  #       # ATTRS{address}=="37:31:62:67:EA:58", SYMLINK+="bluebuilt-kbd"
+  #       DEVPATH=="/devices/virtual/misc/uhid/0005:04E8:7021.0008/input/input32", SYMLINK+="bluebuilt-kbd"
+  #     '';
+  # };
 }
