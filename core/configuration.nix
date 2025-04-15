@@ -78,6 +78,7 @@
       gvfs
       moreutils
       ntfs3g
+      pwgen
       sl
       sshfs
       tldr
