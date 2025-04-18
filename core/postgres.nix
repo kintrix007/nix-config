@@ -1,15 +1,14 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   services.postgresql = {
     enable = true;
-    authentication = pkgs.lib.mkOverride 10 ''
+    authentication = ''
       #type database  DBuser  auth-method
       local all       all     trust
     '';
+    settings = {
+      listen_addresses = "localhost";
+    };
   };
-
-  # services.pgadmin = {
-  #   enable = true;
-  # };
 }
