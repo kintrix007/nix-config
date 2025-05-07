@@ -1,8 +1,6 @@
 {
   lib,
-  # lsb-release,
   stdenv,
-  # vulkan-tools,
   appimageTools,
   makeWrapper,
 }:
@@ -18,6 +16,7 @@ let
     extraPkgs =
       pkgs: with pkgs; [
         lsb-release # Otherwise it fails to get system info
+        vulkan-tools # Maybe?
 
         libGL
         libglvnd
@@ -36,10 +35,7 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ makeWrapper ];
 
-  buildInputs = [
-    # lsb-release
-    # vulkan-tools # Maybe?
-  ];
+  buildInputs = [ ];
 
   strictDeps = true;
 
