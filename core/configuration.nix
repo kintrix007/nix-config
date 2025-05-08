@@ -38,17 +38,17 @@
       essentials = [
         bc
         btop
+        busybox
         calc
         coreutils
         curl
         dos2unix
+        file
         gnumake
         gparted
         htop
         imagemagick
         jq
-        yj # Tool to convert between YAML, JSON, and TOML
-        unstable.jujutsu # Because of GHSA-794x-2rpg-rfgr
         libxml2
         nano
         neofetch
@@ -60,11 +60,13 @@
         poppler_utils # e.g. pdfunite
         ripgrep
         tree
+        unstable.jujutsu # Because of GHSA-794x-2rpg-rfgr
         unzip
         usbutils
         util-linux
         websocat
         wget
+        yj # Tool to convert between YAML, JSON, and TOML
         zip
       ];
     in
