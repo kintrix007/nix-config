@@ -7,7 +7,7 @@ in
 {
   hardware.graphics.enable = true;
   hardware.graphics.extraPackages = with pkgs; [
-    intel-media-driver
+    # intel-media-driver
     # vaapiIntel
     ocl-icd
     intel-compute-runtime
