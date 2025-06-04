@@ -130,6 +130,14 @@
     git = {
       enable = true;
       package = pkgs.gitFull;
+      config = {
+        pull.rebase = true;
+        core.autocrlf = "input";
+
+        alias = {
+          unstage = "restore --staged";
+        };
+      };
     };
 
     appimage = {
