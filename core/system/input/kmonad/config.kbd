@@ -30,7 +30,7 @@
 ;; An overlay
 (deflayer modes
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    @def @gam _    _    _    _    _    _    _    _    _    _    _
+  _    @def @gam _    _    _    _    _    _    _    _    _    _    del
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    a    s    d    f    _    _    j    k    l    ;    _    _
   _    _    _    _    _    _    _    _    _    _    _    @mod
