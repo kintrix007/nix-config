@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   fonts.packages = with pkgs; [
@@ -12,6 +12,13 @@
     dejavu_fonts
     carlito
     roboto
+
+    # Nix pixel font
+    fixedsys-excelsior
+
+    # Minecraft fonts
+    monocraft
+    miracode # Vectorized
 
     # For JP, apparently?
     ipafont
