@@ -1,6 +1,6 @@
 { pkgs }:
 
-with pkgs.unstable.vimPlugins.nvim-treesitter-parsers; [
+with pkgs.vimPlugins.nvim-treesitter-parsers; [
   agda
   awk
   bash
