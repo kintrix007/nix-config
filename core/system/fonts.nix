@@ -5,7 +5,8 @@
     fira
     fira-code
     fira-code-symbols
-    fira-code-nerdfont
+    nerd-fonts.fira-code
+    nerd-fonts.space-mono
     noto-fonts-cjk-sans
     cantarell-fonts
     source-code-pro

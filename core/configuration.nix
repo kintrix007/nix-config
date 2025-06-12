@@ -87,8 +87,8 @@
       wl-clipboard
 
       authenticator
-      filelight
-      konsole
+      kdePackages.filelight
+      kdePackages.konsole
       libdecor
       thunderbird
       # tzclock # Analog clock

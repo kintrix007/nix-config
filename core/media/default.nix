@@ -10,7 +10,7 @@
     gimp
     inkscape
     mpv
-    okular
+    kdePackages.okular
     tiv # A nice terminal image-viewer
 
     ffmpeg
