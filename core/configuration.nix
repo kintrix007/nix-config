@@ -89,6 +89,7 @@
       authenticator
       kdePackages.filelight
       kdePackages.konsole
+      foot
       libdecor
       thunderbird
       # tzclock # Analog clock
