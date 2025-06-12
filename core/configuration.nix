@@ -68,6 +68,10 @@
         wget
         yj # Tool to convert between YAML, JSON, and TOML
         zip
+
+        # kdePackages.konsole # Ligatures are broken on the QT 6 version
+        libsForQt5.konsole
+        foot
       ];
     in
 
@@ -88,8 +92,6 @@
 
       authenticator
       kdePackages.filelight
-      kdePackages.konsole
-      foot
       libdecor
       thunderbird
       # tzclock # Analog clock
