@@ -2,12 +2,15 @@
 
 {
   environment.systemPackages = with pkgs.gnomeExtensions; [
-    pop-shell
     appindicator
+    bluetooth-battery-meter
     blur-my-shell
     color-picker
     kmonad-toggle
-    bluetooth-battery-meter
+    pop-shell
+
+    # Used to be default
+    pkgs.gnome-shell-extensions
 
     pano
     pkgs.libgda6
