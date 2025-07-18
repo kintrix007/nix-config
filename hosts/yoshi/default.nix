@@ -17,7 +17,7 @@
     ../../shared/games
     ../../shared/home-manager
     ../../shared/obs-deps
-    ../../shared/scrtxt
+    ../../shared/scripts
 
     ../../shared/mtkclient-udev.nix
   ];

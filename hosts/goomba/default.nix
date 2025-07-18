@@ -15,6 +15,6 @@
     ../../shared/desktop/gnome
     ../../shared/fprintd
     ../../shared/obs-deps
-    ../../shared/scrtxt
+    ../../shared/scripts
   ];
 }
