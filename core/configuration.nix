@@ -91,6 +91,7 @@
       wl-clipboard
 
       authenticator
+      diffpdf
       kdePackages.filelight
       libdecor
       thunderbird
