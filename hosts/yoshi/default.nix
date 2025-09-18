@@ -8,6 +8,7 @@
     ./home-manager.nix
     # ./tailscale.nix
     ./users.nix
+    ./vpn
 
     # ../../shared/guix
     ../../shared/aseprite
