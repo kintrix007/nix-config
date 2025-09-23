@@ -19,3 +19,7 @@ nixos-generate-config
 ```sh
 nix-shell -p glib gnome.mutter --command 'env XDG_DATA_DIRS=$GSETTINGS_SCHEMAS_PATH gsettings set org.gnome.mutter.keybindings switch-monitor "[]"'
 ```
+
+---
+
+If DNS resolution is broken `resolvectl` is your friend.

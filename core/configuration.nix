@@ -100,10 +100,10 @@
     ];
 
   services = {
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-    };
+    # avahi = {
+    #   enable = true;
+    #   nssmdns4 = true;
+    # };
 
     # Firmware updater
     fwupd.enable = true;
