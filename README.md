@@ -4,7 +4,7 @@
 
 ```sh
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-sudo nix-channel -add https://channels.nixos.org/nixpkgs-unstable nixpkgs-unstable
+sudo nix-channel --add https://channels.nixos.org/nixpkgs-unstable nixpkgs-unstable
 ```
 
 ## Switch to This Config
