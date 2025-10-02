@@ -7,6 +7,7 @@
 
 let
   optList = [
+    "mkfile"
     "scrtxt"
     "ydopaste"
   ];
