@@ -34,6 +34,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   python
   regex
   rust
+  scala
   sql
   teal
   terraform
