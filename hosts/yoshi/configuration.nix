@@ -75,27 +75,6 @@ in
       '';
   };
 
-  networking.nameservers = [
-    "10.1.2.1"
-    "10.10.1.1"
-    "1.1.1.1"
-    "8.8.8.8"
-  ];
-
-  services.resolved = {
-    enable = true;
-    dnssec = "allow-downgrade";
-    # dnssec = "true";
-    fallbackDns = [
-      "10.1.2.1"
-      "10.10.1.1"
-      "1.1.1.1"
-      "8.8.8.8"
-    ];
-    dnsovertls = "opportunistic";
-    # dnsovertls = "true";
-  };
-
   # Enable simulator support
   simulator.enable = true;
 }
