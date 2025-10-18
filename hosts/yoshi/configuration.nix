@@ -27,13 +27,13 @@ in
   networking.hostName = "yoshi"; # Define your hostname.
 
   networking.hosts = {
-    "192.168.178.188" = [ "rwgov" ];
-    "192.168.178.181" = [ "m1" ];
-    "192.168.178.191" = [ "hammerbro" ];
-    "192.168.178.192" = [ "firebro" ];
+    "10.10.1.3" = [ "firebro" ];
+    "10.10.1.4" = [ "hammerbro" ];
     "4.223.120.96" = [ "az1" ];
     "51.12.58.99" = [ "az2" ];
   };
+
+  services.resolved.enable = true;
 
   environment.systemPackages = with pkgs; [
     vscodium
