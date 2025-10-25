@@ -7,7 +7,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    lutris
+    unstable.lutris
 
     # Have it as a flatpak for now
     # heroic
