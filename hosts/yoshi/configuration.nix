@@ -33,7 +33,17 @@ in
     "51.12.58.99" = [ "az2" ];
   };
 
-  services.resolved.enable = true;
+  services.resolved = {
+    enable = true;
+    dnssec = "true";
+    dnsovertls = "opportunistic";
+  };
+
+  networking.search = [
+    "localhost"
+    "local"
+    "boldi.dev"
+  ];
 
   environment.systemPackages = with pkgs; [
     vscodium
