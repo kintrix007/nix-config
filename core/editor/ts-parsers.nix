@@ -1,17 +1,40 @@
 { pkgs }:
 
-with pkgs.vimPlugins.nvim-treesitter-parsers; [
+with pkgs.vimPlugins.nvim-treesitter-parsers;
+[
+  ada
   agda
+  angular
+  arduino
   awk
   bash
+  bibtex
+  blueprint
   c
   c_sharp
+  caddy
+  cairo
+  clojure
   cmake
+  commonlisp
   cpp
   css
+  csv
+  cuda
+  d
   dart
+  desktop
+  dhall
+  disassembly
+  dockerfile
+  doxygen
+  editorconfig
+  elixir
   elm
+  erlang
   fish
+  fortran
+  fsharp
   gdscript
   gdshader
   git_config
@@ -20,49 +43,82 @@ with pkgs.vimPlugins.nvim-treesitter-parsers; [
   gitcommit
   gitignore
   gleam
+  glsl
+  go
+  godot_resource
+  graphql
+  groovy
+  hare
+  hare
   haskell
+  hlsl
+  http
+  hyprlang
+  ini
   janet_simple
   java
   javascript
   jq
+  json
+  json5
+  jsonc
   julia
+  just
+  kotlin
+  latex
+  llvm
   lua
+  luadoc
   make
+  markdown
+  markdown_inline
+  mermaid
   meson
+  nasm
+  nginx
   nim
+  ninja
   nix
+  objc
+  ocaml
+  perl
+  powershell
+  prolog
+  purescript
   python
+  r
+  razor
   regex
+  roc
+  ruby
   rust
   scala
+  scss
   sql
+  svelte
+  sway
+  swift
   teal
   terraform
+  tmux
+  toml
   tsx
+  turtle
   typescript
   typst
   v
   vala
+  verilog
+  vhdl
   vim
+  vimdoc
+  xml
+  xml
+  yaml
   zig
 
   diff
   passwd
   ssh_config
   udev
-
-  csv
-  dhall
-  dockerfile
-  doxygen
-  json
-  json5
-  jsonc
-  markdown
-  markdown_inline
-  toml
-  vimdoc
-  xml
-  xml
-  yaml
 ]
