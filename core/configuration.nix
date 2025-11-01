@@ -130,6 +130,11 @@
     dconf.enable = true;
     ydotool.enable = true;
 
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
+
     git = {
       enable = true;
       package = pkgs.gitFull;
