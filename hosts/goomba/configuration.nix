@@ -33,7 +33,13 @@
     (lib.trace "Temporarily allowing 'dotnet-sdk-wrapped-7.0.410' for Jetbrains Rider. Remove this as soon as possible." "dotnet-sdk-wrapped-7.0.410")
   ];
 
-  programs = { };
+  programs = {
+    _1password.enable = true;
+    _1password-gui = {
+      enable = true;
+      polkitPolicyOwners = [ "boldi" ];
+    };
+  };
 
   services = {
     udev.extraRules = # udev
