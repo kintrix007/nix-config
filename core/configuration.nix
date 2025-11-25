@@ -55,6 +55,8 @@
         nix-index
         nix-prefetch-scripts
         nixos-option
+        nmap # For ncat
+        openssl
         parted
         patchelf
         poppler_utils # e.g. pdfunite
