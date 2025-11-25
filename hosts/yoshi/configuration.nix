@@ -65,6 +65,7 @@ in
     protonvpn-gui
     anki
     scrcpy
+    orca-slicer
   ];
 
   services = {
