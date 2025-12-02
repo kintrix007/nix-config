@@ -39,6 +39,14 @@
       enable = true;
       polkitPolicyOwners = [ "boldi" ];
     };
+
+    obs-studio = {
+      enable = true;
+      # plugins = with pkgs.obs-studio-plugins; [
+      #   input-overlay
+      #   obs-pipewire-audio-capture
+      # ];
+    };
   };
 
   services = {
