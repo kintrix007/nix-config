@@ -1,12 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./extensions.nix
   ];
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
@@ -46,8 +44,12 @@
     epiphany
     newsflash
 
+    gdm-settings
+
     nautilus-open-any-terminal
     papirus-icon-theme
-    kdePackages.breeze-gtk
+    # kdePackages.breeze-gtk   # Does not contain cursors???
+    # kdePackages.breeze-icons # Does not contain cursors???
+    bibata-cursors
   ];
 }
