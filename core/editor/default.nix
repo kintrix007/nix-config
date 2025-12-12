@@ -21,11 +21,11 @@
     # terraform-ls
 
     # Inline Snapshot Testing/Golden Master Testing tool
-    python311Packages.cram
+    python3Packages.cram
 
     marksman
     nodePackages.markdownlint-cli
-    python311Packages.mdformat
+    python3Packages.mdformat
 
     gcc
     clang-tools
@@ -33,10 +33,10 @@
     nodejs
     nodePackages.typescript-language-server
 
-    python311
+    python3
     pyright
-    python311Packages.flake8
-    python311Packages.autopep8
+    python3Packages.flake8
+    python3Packages.autopep8
 
     lua
     lua-language-server
@@ -46,7 +46,6 @@
 
     # commitlint
     # gitlint
-    nodePackages.jsonlint
     yamllint
 
     ghc

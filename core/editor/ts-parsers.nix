@@ -108,7 +108,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   typst
   v
   vala
-  verilog
+  # verilog
   vhdl
   vim
   vimdoc

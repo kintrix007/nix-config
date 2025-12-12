@@ -4,6 +4,10 @@
 
 { lib, pkgs, ... }:
 
+let
+  rev = "nixos-25.05-small";
+  oldpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz") { };
+in
 {
   imports = [
     ./nix
@@ -59,7 +63,7 @@
         openssl
         parted
         patchelf
-        poppler_utils # e.g. pdfunite
+        poppler-utils # e.g. pdfunite
         ripgrep
         tree
         unstable.jujutsu # Because of GHSA-794x-2rpg-rfgr
@@ -72,7 +76,7 @@
         zip
 
         # kdePackages.konsole # Ligatures are broken on the QT 6 version
-        libsForQt5.konsole
+        oldpkgs.libsForQt5.konsole # use old konsole because it is not broken.
         foot
       ];
     in

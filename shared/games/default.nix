@@ -13,7 +13,7 @@
     # heroic
 
     mangohud
-    protonup
+    protonup-ng
     # The following is wrong incorrect
     # (writeShellScriptBin "protonup" ''
     #   ${protonup}/bin/protonup -d "${protonDir}" "$@"
