@@ -62,7 +62,6 @@ in
     # firefox-devedition
     # tor-browser
 
-    protonvpn-gui
     anki
     scrcpy
     orca-slicer
