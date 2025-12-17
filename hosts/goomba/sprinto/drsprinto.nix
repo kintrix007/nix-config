@@ -21,7 +21,6 @@ let
         libGL
         libglvnd
         ffmpeg
-        amdvlk
       ];
   };
   appimageContents = appimageTools.extractType2 { inherit pname version src; };
