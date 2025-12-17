@@ -14,6 +14,6 @@ writeShellApplication {
 
   text = ''
     sleep 2s
-    ydotool type "$(wl-paste -n)"
+    ydotool type -- "$(wl-paste -n)"
   '';
 }
