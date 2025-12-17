@@ -22,7 +22,7 @@
   programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    qemu_full
+    # qemu_full
     distrobox
     # gnome-boxes
     spice-gtk
