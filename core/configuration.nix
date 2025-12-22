@@ -56,9 +56,6 @@ in
         libxml2
         nano
         neofetch
-        nix-index
-        nix-prefetch-scripts
-        nixos-option
         nmap # For ncat
         openssl
         parted
