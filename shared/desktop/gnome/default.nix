@@ -44,8 +44,6 @@
     epiphany
     newsflash
 
-    gdm-settings
-
     nautilus-open-any-terminal
     papirus-icon-theme
     # kdePackages.breeze-gtk   # Does not contain cursors???
