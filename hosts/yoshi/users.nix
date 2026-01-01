@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ ... }:
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -33,9 +33,7 @@
         "input"
         "uinput"
       ];
-      packages = with pkgs; [
-        gh
-      ];
+      packages = [ ];
     };
 
     # wikipedia-race = {
@@ -54,8 +52,8 @@
   };
 
   users.groups = {
-    plugdev = {};
-    itch = {};
+    plugdev = { };
+    itch = { };
   };
 
   # ! READ THE `nixos-option` PAGE ON THIS !

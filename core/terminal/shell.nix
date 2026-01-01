@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   programs.bash = {
     # enable = true; # Should not be explicitly enabled
-    blesh.enable = true;
+    blesh.enable = false;
     completion.enable = true;
     enableLsColors = true;
     undistractMe = {
@@ -18,7 +18,10 @@
     enableLsColors = true;
     syntaxHighlighting = {
       enable = true;
-      highlighters = [ "main" "brackets" ];
+      highlighters = [
+        "main"
+        "brackets"
+      ];
     };
   };
 
