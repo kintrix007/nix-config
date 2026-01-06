@@ -48,7 +48,7 @@ in
   environment.systemPackages = with pkgs; [
     vscodium
     # jetbrains.clion
-    jetbrains.idea-ultimate
+    jetbrains.idea
     # jetbrains.rider
 
     android-tools
