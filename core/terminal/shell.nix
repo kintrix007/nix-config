@@ -8,7 +8,7 @@
     enableLsColors = true;
     undistractMe = {
       enable = true;
-      timeout = 15;
+      timeout = 60;
     };
   };
 
