@@ -151,6 +151,15 @@ in
       };
     };
 
+    ssh = {
+      extraConfig = ''
+        Host git.boldi.dev
+          HostName git.boldi.dev
+          User git
+          Port 443
+      '';
+    };
+
     appimage = {
       enable = true;
       binfmt = true;
