@@ -27,8 +27,22 @@ in
   networking.hostName = "yoshi"; # Define your hostname.
 
   networking.hosts = {
-    "10.10.1.3" = [ "firebro" ];
-    "10.10.1.4" = [ "hammerbro" ];
+    "10.10.1.1" = [
+      "wario"
+      "wario.chla.cz"
+    ];
+    "10.10.1.2" = [
+      "lakitu"
+      "lakitu.chla.cz"
+    ];
+    "10.10.1.3" = [
+      "firebro"
+      "firebro.chla.cz"
+    ];
+    "10.10.1.4" = [
+      "hammerbro"
+      "hammerbro.chla.cz"
+    ];
     "4.223.120.96" = [ "az1" ];
     "51.12.58.99" = [ "az2" ];
   };
