@@ -27,22 +27,10 @@ in
   networking.hostName = "yoshi"; # Define your hostname.
 
   networking.hosts = {
-    "10.10.1.1" = [
-      "wario"
-      "wario.chla.cz"
-    ];
-    "10.10.1.2" = [
-      "lakitu"
-      "lakitu.chla.cz"
-    ];
-    "10.10.1.3" = [
-      "firebro"
-      "firebro.chla.cz"
-    ];
-    "10.10.1.4" = [
-      "hammerbro"
-      "hammerbro.chla.cz"
-    ];
+    "10.10.1.1" = [ "wario.home" ];
+    "10.10.1.2" = [ "lakitu.home" ];
+    "10.10.1.3" = [ "firebro.home" ];
+    "10.10.1.4" = [ "hammerbro.home" ];
     "4.223.120.96" = [ "az1" ];
     "51.12.58.99" = [ "az2" ];
   };
@@ -54,9 +42,10 @@ in
   };
 
   networking.search = [
-    "localhost"
-    "local"
+    "home"
     "boldi.dev"
+    "local"
+    "localhost"
   ];
 
   environment.systemPackages = with pkgs; [
