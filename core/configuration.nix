@@ -6,7 +6,10 @@
 
 let
   rev = "nixos-25.05-small";
-  oldpkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz") { };
+  oldpkgs = import (fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/${rev}.tar.gz";
+    sha256 = "sha256:0v6bd1xk8a2aal83karlvc853x44dg1n4nk08jg3dajqyy0s98np";
+  }) { };
 in
 {
   imports = [
