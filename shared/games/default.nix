@@ -21,6 +21,8 @@
 
     wine-wayland
     winetricks
+
+    r2modman
   ];
 
   programs.gamemode.enable = true;
