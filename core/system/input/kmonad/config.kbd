@@ -17,6 +17,15 @@
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
+;; (deflayer ctl_held
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    ret  _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _              _              _    _    _    _
+;; )
+
 ;; Complete layout
 (deflayer gaming
   caps f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
@@ -43,7 +52,7 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    @def @gam @luk _    _    _    _    _    _    _    _    _    del
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    a    s    d    f    _    _    j    k    l    ;    _    _
+  _    a    s    d    f    _    _    j    k    l    ;    ret  _
   _    _    _    _    _    _    _    _    _    _    _    @mod
   _    _    _              _              _    _    _    _
 )
@@ -74,4 +83,5 @@
     gam (layer-switch gaming)
     luk (layer-switch lukas)
     def (layer-switch default)
+    ;; ctl (layer-toggle ctl_held)
 )
