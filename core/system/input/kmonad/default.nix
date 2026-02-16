@@ -14,17 +14,27 @@
           fallthrough = true;
         };
       };
+      bluetoothKeyboard = {
+        # TODO: Change to a permanent device path
+        device = "/dev/input/event22";
+        config = builtins.readFile ./config.kbd;
+
+        defcfg = {
+          enable = true;
+          allowCommands = false;
+          fallthrough = true;
+        };
+      };
     };
 
     package = pkgs.kmonad;
   };
 
-  # services = {
-  #   udev.extraRules = # udev
-  #     ''
-  #       # bluebuilt keyboard at work
-  #       # ATTRS{address}=="37:31:62:67:EA:58", SYMLINK+="bluebuilt-kbd"
-  #       DEVPATH=="/devices/virtual/misc/uhid/0005:04E8:7021.0008/input/input32", SYMLINK+="bluebuilt-kbd"
-  #     '';
-  # };
+  services = {
+    udev.extraRules = # udev
+      ''
+        # bluebuilt keyboard at work
+        ATTRS{uniq}=="26:23:73:37:7b:63", SYMLINK+="bt-keyboard"
+      '';
+  };
 }
