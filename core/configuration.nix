@@ -100,6 +100,7 @@ in
       # Some file managers
       ranger
       mc
+      lazygit # For when I feel like it
 
       authenticator
       diffpdf
