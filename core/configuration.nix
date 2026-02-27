@@ -101,6 +101,7 @@ in
       diffpdf
       kdePackages.filelight
       libdecor
+      zenity
       # tzclock # Analog clock
       w3m # A nice text-based browser
     ];
@@ -179,8 +180,8 @@ in
   # };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = (pkgs.lib.range 16500 16600) ++ [ ];
-  networking.firewall.allowedUDPPorts = (pkgs.lib.range 16500 16600) ++ [ ];
+  networking.firewall.allowedTCPPorts = (lib.range 16500 16600) ++ [ ];
+  networking.firewall.allowedUDPPorts = (lib.range 16500 16600) ++ [ ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
