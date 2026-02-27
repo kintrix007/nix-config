@@ -36,6 +36,31 @@
       packages = [ ];
     };
 
+    catto = {
+      isNormalUser = true;
+      extraGroups = [
+        "networkmanager"
+
+        # For virt-manager
+        "kvm"
+        "libvirtd"
+
+        # For ydotool
+        "ydotool"
+
+        # For adb
+        "adbusers"
+
+        # For spice-gtk
+        "spice"
+
+        # For KMonad
+        "input"
+        "uinput"
+      ];
+      packages = [ ];
+    };
+
     # wikipedia-race = {
     #   isNormalUser = true;
     #   description = "wikipedia-race";
