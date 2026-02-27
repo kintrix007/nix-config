@@ -31,7 +31,7 @@
     clang-tools
 
     gdb
-    gf # A nice GDB Frontend
+    gf # A nice GDB Frontend (exe: gf2)
 
     nodejs
     nodePackages.typescript-language-server

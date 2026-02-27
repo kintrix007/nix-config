@@ -97,6 +97,10 @@ in
       tldr
       wl-clipboard
 
+      # Some file managers
+      ranger
+      mc
+
       authenticator
       diffpdf
       kdePackages.filelight
