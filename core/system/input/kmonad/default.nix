@@ -16,7 +16,7 @@
       };
       bluetoothKeyboard = {
         # TODO: Change to a permanent device path
-        device = "/dev/input/event22";
+        device = "/dev/bt-keyboard";
         config = builtins.readFile ./config.kbd;
 
         defcfg = {
@@ -34,7 +34,7 @@
     udev.extraRules = # udev
       ''
         # bluebuilt keyboard at work
-        ATTRS{uniq}=="26:23:73:37:7b:63", SYMLINK+="bt-keyboard"
+        SUBSYSTEMS=="input", ATTRS{uniq}=="26:23:73:37:7b:63", SYMLINK+="bt-keyboard"
       '';
   };
 }
