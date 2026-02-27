@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -29,6 +29,9 @@
 
     gcc
     clang-tools
+
+    gdb
+    gf # A nice GDB Frontend
 
     nodejs
     nodePackages.typescript-language-server
