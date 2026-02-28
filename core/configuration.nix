@@ -101,6 +101,10 @@ in
       ranger
       mc
       lazygit # For when I feel like it
+      meld # A Git mergetool
+      kdiff3 # Another (praised-by-reddit) Git mergetool
+      # p4merge # Praised even more by reddit, but not in nixpkgs
+      git-absorb # Automagically figure out what commits to fixup???
 
       authenticator
       diffpdf
