@@ -189,8 +189,8 @@ in
   # };
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = (lib.range 16500 16600) ++ [ ];
-  networking.firewall.allowedUDPPorts = (lib.range 16500 16600) ++ [ ];
+  networking.firewall.allowedTCPPorts = (lib.range 16500 16700) ++ [ ];
+  networking.firewall.allowedUDPPorts = (lib.range 16500 16700) ++ [ ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
