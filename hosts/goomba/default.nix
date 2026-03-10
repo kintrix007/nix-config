@@ -9,6 +9,7 @@
     ./drsprinto.nix
     ./luks.nix
     ./vpn
+    ./winboat
     ./wireshark.nix
 
     ../../shared/cups
