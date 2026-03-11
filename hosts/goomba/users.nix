@@ -1,12 +1,15 @@
-{ pkgs, config, ... }:
+{ ... }:
 
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
     boldi = {
       isNormalUser = true;
+      group = "boldi";
       description = "boldi";
       extraGroups = [
+        "users"
+
         "networkmanager"
         "wheel"
 
@@ -36,6 +39,7 @@
 
   users.groups = {
     wireshark = { };
+    boldi = { };
   };
 
   # ! READ THE `nixos-option` PAGE ON THIS !
