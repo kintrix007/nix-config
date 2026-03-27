@@ -37,7 +37,7 @@ in
 
   services.resolved = {
     enable = true;
-    dnssec = "true";
+    dnssec = "allow-downgrade";
     dnsovertls = "opportunistic";
   };
 
