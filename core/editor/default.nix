@@ -44,6 +44,10 @@
     lua
     lua-language-server
 
+    breezy # A friendly version control system?
+    mercurial # Another friendly version control system
+    jujutsu # I wanna look into this one too
+
     # A Rust REPL
     evcxr
 

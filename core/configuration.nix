@@ -67,7 +67,6 @@ in
         rename
         ripgrep
         tree
-        unstable.jujutsu # Because of GHSA-794x-2rpg-rfgr
         unzip
         usbutils
         util-linux
