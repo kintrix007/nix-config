@@ -96,9 +96,14 @@ in
       tldr
       wl-clipboard
 
+      # Mail client
+      aerc
+
       # Some file managers
       ranger
       mc
+
+      # Git tools
       lazygit # For when I feel like it
       meld # A Git mergetool
       kdiff3 # Another (praised-by-reddit) Git mergetool
