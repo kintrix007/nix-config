@@ -9,6 +9,7 @@
     # ./tailscale.nix
     ./users.nix
     ./vpn
+    ./messaging.nix
 
     # ../../shared/guix
     ../../shared/aseprite
