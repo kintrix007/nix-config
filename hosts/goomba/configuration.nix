@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -30,8 +30,13 @@
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
-    (lib.trace "Temporarily allowing 'dotnet-sdk-wrapped-7.0.410' for Jetbrains Rider. Remove this as soon as possible." "dotnet-sdk-wrapped-7.0.410")
+    # (lib.trace "Temporarily allowing 'dotnet-sdk-wrapped-7.0.410' for Jetbrains Rider. Remove this as soon as possible." "dotnet-sdk-wrapped-7.0.410")
   ];
+
+  # For using Nvidia GPU from containers
+  # hardware.nvidia-container-toolkit.enable = true;
+  # services.xserver.videoDrivers = [ "nvidia" ];
+  # hardware.nvidia.open = true;
 
   programs = {
     _1password.enable = true;

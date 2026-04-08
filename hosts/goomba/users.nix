@@ -5,11 +5,8 @@
   users.users = {
     boldi = {
       isNormalUser = true;
-      group = "boldi";
       description = "boldi";
       extraGroups = [
-        "users"
-
         "networkmanager"
         "wheel"
 
@@ -28,6 +25,28 @@
 
         # For wireshark
         "wireshark"
+
+        # ? May be necessary for DR Sprinto?
+        # "video"
+        # "render"
+      ];
+      packages = [ ];
+    };
+
+    kin = {
+      isNormalUser = true;
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+
+        # For adb
+        "adbusers"
+
+        # For spice-gtk
+        "spice"
+
+        # For ydotool
+        "ydotool"
 
         # ? May be necessary for DR Sprinto?
         # "video"
