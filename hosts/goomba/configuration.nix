@@ -27,6 +27,11 @@
     wireguard-tools
 
     unstable.dbvisualizer
+
+    bruno
+    bruno-cli
+    hoppscotch
+    yaak
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
