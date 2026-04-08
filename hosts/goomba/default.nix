@@ -7,9 +7,10 @@
 
     ./android.nix
     ./drsprinto.nix
+    ./fs.nix
     ./luks.nix
     ./vpn
-    ./winboat
+    # ./winboat
     ./wireshark.nix
 
     ../../shared/cups
