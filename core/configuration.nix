@@ -50,6 +50,7 @@ in
         coreutils
         curl
         dos2unix
+        exiftool  # To extract EXIF data from images
         file
         gnumake
         gparted
