@@ -84,6 +84,7 @@ in
 
     essentials
     ++ [
+      httrack  # Web crawler to download websites
       cifs-utils
       cowsay
       exfat
