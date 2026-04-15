@@ -25,7 +25,8 @@ writeShellApplication {
     cd "$TMP"
     gnome-screenshot -a -f area.png
     if ! [[ -f area.png ]]; then
-      exit
+      >&2 echo "error: Could not capture screenshot."
+      exit 2
     fi
 
     mogrify -modulate 100,0 -resize 200% area.png
