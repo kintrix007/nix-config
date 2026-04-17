@@ -1,4 +1,9 @@
-# How to Find Bluetooth Keyboards
+# README
+
+The following section is no longer necessary, since Kanata can auto-discover
+devices, as opposed to KMonad.
+
+## How to Find Bluetooth Keyboards
 
 - ```sh
   cat /proc/bus/input/devices | grep -i bluetooth

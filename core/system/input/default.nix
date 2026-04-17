@@ -3,7 +3,7 @@
 {
   imports = [
     ./ibus.nix
-    ./kmonad
+    ./kanata
   ];
 
   services.xserver.xkb = {

@@ -67,15 +67,15 @@
 ;; )
 
 (defalias
-    a (tap-hold-next-release 200 a lmet)
-    s (tap-hold-next-release 200 s lalt)
-    d (tap-hold-next-release 200 d lsft)
-    f (tap-hold-next-release 200 f lctl)
+    a (tap-hold-release 200 200 a lmet)
+    s (tap-hold-release 200 200 s lalt)
+    d (tap-hold-release 200 200 d lsft)
+    f (tap-hold-release 200 200 f lctl)
 
-    j (tap-hold-next-release 200 j lctl)
-    k (tap-hold-next-release 200 k lsft)
-    l (tap-hold-next-release 200 l lalt)
-    ; (tap-hold-next-release 200 ; lmet)
+    j (tap-hold-release 200 200 j lctl)
+    k (tap-hold-release 200 200 k lsft)
+    l (tap-hold-release 200 200 l lalt)
+    ; (tap-hold-release 200 200 ; lmet)
 )
 
 (defalias
