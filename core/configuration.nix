@@ -112,6 +112,10 @@ in
       # p4merge # Praised even more by reddit, but not in nixpkgs
       git-absorb # Automagically figure out what commits to fixup???
 
+      # Tools for managing references in .bib files
+      jabref
+      zotero
+
       authenticator
       diffpdf
       kdePackages.filelight
