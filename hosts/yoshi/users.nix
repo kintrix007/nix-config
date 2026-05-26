@@ -61,6 +61,21 @@
       packages = [ ];
     };
 
+    rilaacat = {
+      isNormalUser = true;
+      extraGroups = [
+        "networkmanager"
+
+        # For ydotool
+        "ydotool"
+
+        # For KMonad
+        "input"
+        "uinput"
+      ];
+      packages = [ ];
+    };
+
     # wikipedia-race = {
     #   isNormalUser = true;
     #   description = "wikipedia-race";

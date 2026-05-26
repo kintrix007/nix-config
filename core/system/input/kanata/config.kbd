@@ -46,11 +46,20 @@
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
+;; Complete layout
+(deflayer rila
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+  `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  @mod
+)
 
 ;; An overlay
 (deflayer modes
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    @def @gam @luk _    _    _    _    _    _    _    _    _    del
+  _    @def @gam @luk @ril _    _    _    _    _    _    _    _    del
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    a    s    d    f    _    _    j    k    l    ret  ret  _
   _    _    _    _    _    _    _    _    _    _    _    @mod
@@ -82,6 +91,7 @@
     mod (layer-toggle modes)
     gam (layer-switch gaming)
     luk (layer-switch lukas)
+    ril (layer-switch rila)
     def (layer-switch default)
     ;; ctl (layer-toggle ctl_held)
 )
