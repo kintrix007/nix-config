@@ -10,6 +10,7 @@ let
     "mkfile"
     "scrtxt"
     "ydopaste"
+    "delayed"
   ];
   mkScriptOption = name: {
     "${name}".enable = lib.mkOption {
