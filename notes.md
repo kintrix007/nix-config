@@ -23,3 +23,17 @@ nix-shell -p glib gnome.mutter --command 'env XDG_DATA_DIRS=$GSETTINGS_SCHEMAS_P
 ---
 
 If DNS resolution is broken `resolvectl` is your friend.
+
+---
+
+Get gcc libraries for static linking:
+
+```sh
+nix-shell -p glibc.static
+```
+
+Get Nuitka Python compiler:
+
+```sh
+nix-shell -p glibc.static
+```
