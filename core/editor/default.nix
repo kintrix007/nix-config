@@ -9,11 +9,11 @@
   environment.systemPackages = with pkgs; [
     nil # One Nix LSP
     nixd # Apparently better than Nil
-    nixfmt-rfc-style
+    nixfmt
     nixpkgs-fmt
     alejandra # A Nix formatter
 
-    nodePackages.bash-language-server
+    bash-language-server
     shellcheck
     shfmt
 
@@ -24,7 +24,7 @@
     python3Packages.cram
 
     marksman
-    nodePackages.markdownlint-cli
+    markdownlint-cli
     python3Packages.mdformat
 
     gcc
@@ -34,7 +34,7 @@
     gf # A nice GDB Frontend (exe: gf2)
 
     nodejs
-    nodePackages.typescript-language-server
+    typescript-language-server
 
     python3
     pyright

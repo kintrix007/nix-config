@@ -9,8 +9,8 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   awk
   bash
   bibtex
-  blueprint
   c
+  c3
   c_sharp
   caddy
   cairo
@@ -27,12 +27,14 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   dhall
   disassembly
   dockerfile
+  dot
   doxygen
   editorconfig
   elixir
   elm
   erlang
   fish
+  forth
   fortran
   fsharp
   gdscript
@@ -52,18 +54,23 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   hare
   haskell
   hlsl
+  html
+  htmldjango
   http
   hyprlang
+  idris
   ini
   janet_simple
   java
+  javadoc
   javascript
+  jjdescription
   jq
   json
   json5
-  jsonc
   julia
   just
+  kitty
   kotlin
   latex
   llvm
@@ -79,6 +86,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   nim
   ninja
   nix
+  nu
   objc
   ocaml
   perl
@@ -88,7 +96,9 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   python
   r
   razor
+  readline
   regex
+  roc
   roc
   ruby
   rust
@@ -108,7 +118,6 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   typst
   v
   vala
-  # verilog
   vhdl
   vim
   vimdoc
@@ -118,6 +127,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   zig
 
   diff
+  gpg
   passwd
   ssh_config
   udev

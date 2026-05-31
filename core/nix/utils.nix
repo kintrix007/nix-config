@@ -3,7 +3,11 @@
 {
   programs = {
     nh.enable = true;
-    nix-index.enable = true;
+    nix-index = {
+      enable = true;
+      enableBashIntegration = false;  # Because otherwise it doesn't rebuild
+      enableZshIntegration = false;   # Because otherwise it doesn't rebuild
+    };
   };
 
   system.tools = {

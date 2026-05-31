@@ -59,7 +59,7 @@ in
         jq
         libxml2
         nano
-        neofetch
+        fastfetch
         nmap # For ncat
         openssl
         parted

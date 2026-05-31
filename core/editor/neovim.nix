@@ -25,8 +25,7 @@ let
       nvim-treesitter
       nvim-treesitter-context
       nvim-treesitter-endwise
-      nvim-treesitter-refactor
-      playground
+      # nvim-treesitter-refactor
 
       nvim-lint
       nvim-dap

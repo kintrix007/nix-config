@@ -37,8 +37,12 @@ in
 
   services.resolved = {
     enable = true;
-    dnssec = "allow-downgrade";
-    dnsovertls = "opportunistic";
+    settings = {
+      Resolve = {
+        DNSSEC = "allow-downgrade";
+        DNSOverTLS = "opportunistic";
+      };
+    };
   };
 
   networking.search = [
