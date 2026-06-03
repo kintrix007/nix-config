@@ -10,7 +10,6 @@
     ./fs.nix
     ./luks.nix
     ./vpn
-    # ./winboat
     ./wireshark.nix
 
     ../../shared/cups
@@ -18,5 +17,6 @@
     ../../shared/fprintd
     ../../shared/obs-deps
     ../../shared/scripts
+    # ../../shared/winboat
   ];
 }

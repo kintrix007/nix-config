@@ -20,6 +20,7 @@
     ../../shared/home-manager
     ../../shared/obs-deps
     ../../shared/scripts
+    ../../shared/winboat
 
     ../../shared/mtkclient-udev.nix
   ];
