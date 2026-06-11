@@ -50,7 +50,7 @@ in
         coreutils
         curl
         dos2unix
-        exiftool  # To extract EXIF data from images
+        exiftool # To extract EXIF data from images
         file
         gnumake
         gparted
@@ -84,7 +84,7 @@ in
 
     essentials
     ++ [
-      httrack  # Web crawler to download websites
+      httrack # Web crawler to download websites
       cifs-utils
       cowsay
       exfat
@@ -148,8 +148,16 @@ in
   };
 
   # For flatpak
-  # ! NOTE: Instead enable it where you enable your desktop!
+  # NOTE: Instead enable it where you enable your desktop!
   # xdg.portal.enable = true;
+
+  # NOTE: Instead enable it where you enable your desktop!
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [ "konsole.desktop" ];
+    };
+  };
 
   programs = {
     firefox.enable = true;
