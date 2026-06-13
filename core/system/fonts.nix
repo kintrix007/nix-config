@@ -7,6 +7,8 @@
     fira-code-symbols
     nerd-fonts.fira-code
     nerd-fonts.space-mono
+    jetbrains-mono
+    nerd-fonts.jetbrains-mono
     comic-mono
     noto-fonts-cjk-sans
     cantarell-fonts
