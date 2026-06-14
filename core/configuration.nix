@@ -78,6 +78,7 @@ in
 
         # kdePackages.konsole # Ligatures are broken on the QT 6 version
         oldpkgs.libsForQt5.konsole # use old konsole because it is not broken.
+        ghostty # Supports ligatures! And don't need to use old version...
         foot
       ];
     in
