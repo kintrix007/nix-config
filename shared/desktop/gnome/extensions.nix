@@ -8,7 +8,7 @@
     color-picker
     kmonad-toggle
     # NixOS 26.05 ships a pop-shell incompatible with its GNOME version...
-    pkgs.unstable.gnomeExtensions.pop-shell
+    pop-shell
 
     # Used to be default
     pkgs.gnome-shell-extensions
