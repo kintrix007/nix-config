@@ -17,6 +17,8 @@
     shellcheck
     shfmt
 
+    tree-sitter
+
     # terraform
     # terraform-ls
 
