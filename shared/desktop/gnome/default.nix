@@ -8,6 +8,11 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  services.desktopManager.cosmic = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   environment.gnome.excludePackages = with pkgs; [
     # baobab      # disk usage analyzer
     # cheese      # photo booth
