@@ -108,6 +108,7 @@ with pkgs.vimPlugins.nvim-treesitter-parsers;
   svelte
   sway
   swift
+  tcl
   teal
   terraform
   tmux
