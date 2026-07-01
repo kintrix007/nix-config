@@ -7,7 +7,7 @@
     completion.enable = true;
     enableLsColors = true;
     undistractMe = {
-      enable = true;
+      enable = false;
       timeout = 60;
     };
   };
