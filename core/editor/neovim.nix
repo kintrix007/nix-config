@@ -33,6 +33,7 @@ let
       indent-blankline-nvim
       vim-surround
       nvim-autopairs
+      nvim-ts-autotag
 
       lualine-nvim
       # Needed for lualine
