@@ -119,6 +119,8 @@ in
       jabref
       zotero
 
+      kdePackages.plasma-sdk # For `iconexplorer`
+
       authenticator
       diffpdf
       kdePackages.filelight
