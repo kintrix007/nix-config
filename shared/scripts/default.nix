@@ -7,10 +7,11 @@
 
 let
   optList = [
+    "delayed"
     "mkfile"
+    "mkpass"
     "scrtxt"
     "ydopaste"
-    "delayed"
   ];
   mkScriptOption = name: {
     "${name}".enable = lib.mkOption {

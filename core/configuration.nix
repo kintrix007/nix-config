@@ -39,6 +39,8 @@ in
   # Enable networking
   networking.networkmanager.enable = true;
 
+  environment.wordlist.enable = true;
+
   environment.systemPackages =
     with pkgs;
     let
