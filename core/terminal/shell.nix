@@ -32,5 +32,7 @@
     silent = true;
     loadInNixShell = true;
     nix-direnv.enable = true;
+
+    enableBashIntegration = true;
   };
 }
