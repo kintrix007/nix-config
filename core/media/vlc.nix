@@ -1,14 +1,12 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    vlc
-  ];
+  programs.vlc = {
+    enable = true;
+    chromecast.openFirewall = true;
 
-  environment.sessionVariables = {
-    VLC_PLUGIN_PATH = "${pkgs.vlc-bittorrent}";
+    plugins = with pkgs; [
+      vlc-bittorrent
+    ];
   };
-
-  # For Chromecast support
-  networking.firewall.allowedTCPPorts = [ 8010 ];
 }
