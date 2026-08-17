@@ -106,6 +106,9 @@ in
 
       # Some file managers
       ranger
+      # A fancy ranger alternative that uses the kitty-image-protocol for file
+      # previews! It's pretty cool.
+      superfile
       mc
 
       # Git tools
