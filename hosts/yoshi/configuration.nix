@@ -16,7 +16,6 @@ in
     # Include the results of the hardware scan.
     <nixos-hardware/framework/13-inch/13th-gen-intel>
     # "${epic-games-notifier}/module.nix"
-    ../../modules/simulator
   ];
 
   ############################

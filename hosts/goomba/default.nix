@@ -12,6 +12,9 @@
     ./vpn
     ./wireshark.nix
 
+    # Import user-defined modules
+    ../../modules
+
     ../../shared/cups
     ../../shared/desktop/gnome
     ../../shared/fprintd

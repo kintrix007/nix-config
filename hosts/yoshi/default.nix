@@ -11,6 +11,9 @@
     ./vpn
     ./messaging.nix
 
+    # Import user-defined modules
+    ../../modules
+
     # ../../shared/guix
     ../../shared/aseprite
     ../../shared/cups
