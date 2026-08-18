@@ -8,35 +8,15 @@
 {
   options = {
     programs.vlc = {
-      enable = lib.mkOption {
-        default = false;
-        example = true;
-        type = with lib.types; bool;
-        description = ''
-          Whether to enable VideoLAN's VLC media player.
-        '';
-      };
+      enable = lib.mkEnableOption "Whether to enable VideoLAN's VLC media player.";
+      package = lib.mkPackageOption pkgs "vlc" { };
 
-      package = lib.mkOption {
-        default = pkgs.vlc;
-        # example = pkgs.vlc;
-        type = with lib.types; package;
-        description = ''
-          VLC package to use.
-        '';
-      };
+      chromecast.openFirewall = lib.mkEnableOption ''
+        Open the default port (8010) in the firewall for Chromecast to work.
 
-      chromecast.openFirewall = lib.mkOption {
-        default = false;
-        example = true;
-        type = with lib.types; bool;
-        description = ''
-          Open the default port (8010) in the firewall for Chromecast to work.
-
-          Make sure to use the {package}`vlc` package with
-          `chromecastSupport = true`, which is the default.
-        '';
-      };
+        Make sure to use the {package}`vlc` package with
+        `chromecastSupport = true`, which is the default.
+      '';
 
       plugins = lib.mkOption {
         default = [ ];
