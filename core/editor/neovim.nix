@@ -29,6 +29,7 @@ let
 
       nvim-lint
       nvim-dap
+      nvim-dap-python
 
       indent-blankline-nvim
       vim-surround
