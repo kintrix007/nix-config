@@ -12,6 +12,8 @@
     ./vpn
     ./wireshark.nix
 
+    ./svn.nix
+
     # Import user-defined modules
     ../../modules
 
