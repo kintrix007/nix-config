@@ -32,9 +32,20 @@
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   esc  a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lsft z    x    c    v    b    n    m    ,    .    /    @mod
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
+
+;; Complete layout for Scrap Mechanic (toggle run)
+(deflayer scrap
+  @cap f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+  `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  a    s    d    f    g    h    j    k    l    ;    '    ret
+  @trun z   x    c    v    b    n    m    ,    .    /    @mod
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
 
 ;; Complete layout
 (deflayer lukas
@@ -59,7 +70,7 @@
 ;; An overlay
 (deflayer modes
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    @def @gam @luk @ril _    _    _    _    _    _    _    _    del
+  _    @def @gam @luk @ril _    _    _    _    _    _    _    @scr del
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    a    s    d    f    _    _    j    k    l    ;    _    _
   _    _    _    _    _    _    _    _    _    _    _    @mod
@@ -74,6 +85,12 @@
 ;;   _    _    _    _    _    _    _    _    _    _    _    @mod
 ;;   _    _    _              _              _    _    _    _
 ;; )
+
+(deffakekeys vklsft lsft)
+
+(defalias
+    trun (on-press toggle-vkey vklsft)
+)
 
 (defalias
     a (tap-hold-release 200 200 a lmet)
@@ -92,10 +109,15 @@
 )
 
 (defalias
+    sft (tap-hold-release 200 200 caps (layer-toggle modes))
+)
+
+(defalias
     mod (layer-toggle modes)
     gam (layer-switch gaming)
     luk (layer-switch lukas)
     ril (layer-switch rila)
     def (layer-switch default)
+    scr (layer-switch scrap)
     ;; ctl (layer-toggle ctl_held)
 )
