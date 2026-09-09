@@ -31,6 +31,9 @@ let
       nvim-dap
       nvim-dap-python
 
+      # Text alignment commands and motions
+      mini-align
+
       indent-blankline-nvim
       vim-surround
       nvim-autopairs
