@@ -17,6 +17,8 @@
     # Import user-defined modules
     ../../modules
 
+    # ../../shared/games
+
     ../../shared/cups
     ../../shared/desktop/gnome
     ../../shared/fprintd
