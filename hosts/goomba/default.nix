@@ -6,6 +6,7 @@
     ./users.nix
 
     ./android.nix
+    ./ios.nix
     ./drsprinto.nix
     ./fs.nix
     ./luks.nix
