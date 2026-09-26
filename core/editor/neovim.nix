@@ -27,6 +27,9 @@ let
       nvim-treesitter-endwise
       # nvim-treesitter-refactor
 
+      # Edit filesystem in a buffer
+      oil-nvim
+
       nvim-lint
       nvim-dap
       nvim-dap-python
