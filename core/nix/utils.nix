@@ -20,5 +20,7 @@
     statix
     nix-prefetch
     nix-prefetch-scripts
+
+    nix-output-monitor
   ];
 }
