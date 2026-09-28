@@ -1,3 +1,7 @@
 /configuration.nix
 /hardware-configuration.nix
 result
+
+# Dev env
+.direnv/
+.envrc
