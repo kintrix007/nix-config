@@ -187,6 +187,7 @@ in
 
         alias = {
           unstage = "restore --staged";
+          tree  = "log --graph --oneline --abbrev-commit --decorate";
         };
       };
     };
