@@ -27,7 +27,7 @@
 
     marksman
     markdownlint-cli
-    python3Packages.mdformat
+    mdformat
 
     gcc
     clang-tools
