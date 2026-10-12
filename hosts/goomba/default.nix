@@ -15,6 +15,8 @@
 
     ./svn.nix
 
+    ./gitlab-runner
+
     # Import user-defined modules
     ../../modules
 
